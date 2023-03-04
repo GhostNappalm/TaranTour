@@ -4,8 +4,8 @@
 
     <meta charset="UTF-8">
     
-	<!-- FAVICON
-    <link rel="shortcut icon" href=".\images\favicon.ico" type="image/x-icon"> -->
+
+    <link rel="shortcut icon" href="images\PPM.ico" type="image/x-icon"> 
 
     <link rel="stylesheet" href="css\generalCss.css">
 
@@ -16,7 +16,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-tieKjBGr0zz0mT7cXBCZjXBV16g4Qs47l4Yrl3lIUCgV7bfaNfPF/dwo7fnuQk0OkVqd/qOjKQQAKyOc+0Wglg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
     
   <!--  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -29,30 +29,36 @@
     
   </head>
   <body>
-    <header class="text-center">
-    	<h1 style="font-size: 8vh"> TaranTour </h1>
+    <header >
+      
+      <img class="Logo"src="images\logo.jpg">
+      
 
+      <div class="SfondoTitolo">
+    	<h1 class="Titolo"> TaranTour </h1>
+      </div>
 
-  <div class="lang dropdown">
-    <button class="btn " type="button" data-toggle="dropdown"> <img class="imag" src="images\ita.png"> <label class="cool"> Italiano </label> <span class="caret cool"></span> </button>
-    <ul class="dropdown-menu" style="width: 1vh">
-      <li class="text-center lig"> <img class="imag" src="images\ing.png"> <label> English </label> </li>
-      <li class="text-center lig"> <img class="imag" src="images\fra.png"> <label> French </label> </li>
-      <li class="text-center lig"> <img class="imag" src="images\spa.png"> <label> Spanish </label> </li>
-      <li class="text-center lig"> <img class="imag" src="images\det.png"> <label> German </label> </li>
-    </ul>
-  </div>
+    <div class="lang dropdown" >
+      <button class="btn" type="button" data-toggle="dropdown" > <img class="imag" src="images\ita.png"> <label class="cool">  Italiano </label> <span class="caret cool"></span></button>
+      <ul class="dropdown-menu">
+        <li class="text-center lig"> <img class="imag" src="images\ing.png"> <label> English </label> </li>
+        <li class="text-center lig"> <img class="imag" src="images\fra.png"> <label> French </label> </li>
+        <li class="text-center lig"> <img class="imag" src="images\spa.png"> <label> Spanish </label> </li>
+        <li class="text-center lig"> <img class="imag" src="images\det.png"> <label> German </label> </li>
+      </ul>
+    </div>
+
   
     </header>
     
     <ul class="text-center">
-  			<li><a href="#">Introduzione</a></li>
+  			<li><a class="selected" href="#">Introduzione</a></li>
   			<li><a href="#">Storia</a></li>
   			<li><a href="#">Attrazioni</a></li>
   			<li><a href="#">Tradizioni e festività</a></li>
   			<li><a href="#">Eventi</a></li>
   			<li><a href="#">Chi siamo?</a></li>
-  			<li><a href="#">Esci</a></li>
+  			<li><a href="#" class="exit">Esci</a></li>
 	</ul>
  
  </body>

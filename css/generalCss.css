@@ -8,13 +8,10 @@ body {
 header {
 	color: white;
 	padding: 2vh;
-	background-color: blue;
-	box-shadow: 0px 15px 10px -15px #111;
+  height: 14vh;
+	background-color: #297AC5;
 }
 
-.esci{
-background-color: #c14953ff;
-}
 
 ul {
 z-index: -1;
@@ -33,42 +30,91 @@ li a {
   color: #000;
   padding: 17.3%;
   border: 0.2vh solid black;
-  background-color: cyan;
+  background-color: #f7f7ffff;
   text-decoration: none;
 }
 
 
 li a:hover {
-  background-color: #555;
-  color: white;
+  background-color: #C2DDFF;
+  color:black;
   text-decoration: none;
+}
+
+.selected{
+  background-color: #4a8fe7;
+  font-weight: bolder;
+  border: 0.5vh black solid;
+}
+
+.exit{
+  background-color:#c14953ff;
+}
+
+.exit:hover{
+  background-color:#B20808;
 }
 
 
 .lang {
-	width: 12vh;
-	position: relative;
-	bottom: 9vh;
-	right: 10vh;
-	float: right;
+	position: absolute;
+  top:2vh;
+  right:5vh;
+  float:right;
 }
 
 .imag {
-	width: 70px;
+	width: 6vh;
 }
 
 .cool {
 color: white;
 }
 
+
+.fix{
+  position: sticky;
+}
+
+.Logo{
+position:absolute;
+width: 15vh;
+top:1vh;
+left:5vh;
+mix-blend-mode: color-burn;
+}
+
 label {
 padding-left: 1vh;
 padding-right: 0.5vh;
+font-size: 2vh;
 }
 
 .lig:hover {
 background-color: #F5F5F5;
 }
 
+.SfondoTitolo {
+position: absolute;
+text-align: center;
+width: 30vh;
+height: 10vh;
+left:85vh;
+top: 1vh;
+border-top-right-radius: 40%;
+border-top-left-radius: 40%;
+border-bottom-right-radius: 20%;
+border-bottom-left-radius: 20%;
 
 
+background: linear-gradient(360deg, #297AC5 0%, rgba(7, 114, 214, 0) 100%),
+            linear-gradient(180deg, #FF0000 0%, #FF0000 0.01%, 
+            rgba(255, 0, 0, 0.78) 69.27%, 
+            rgba(255, 0, 0, 0) 100%);
+}
+
+.Titolo{
+  font-size: 6vh;
+font-family: 'Salsa';
+  margin-top:2vh;
+}

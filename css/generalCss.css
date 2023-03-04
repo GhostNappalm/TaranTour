@@ -1,0 +1,30 @@
+body {
+ font-family: Open Sans;
+}
+
+header {
+	color: white;
+	background-color: blue;
+	padding: 3%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 300px; 
+  height: 750px; 
+  background-color: #f1f1f1; /* Imposta il colore di sfondo */
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #555;
+  color: white;
+}

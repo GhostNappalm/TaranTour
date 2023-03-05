@@ -8,7 +8,7 @@ body {
 header {
 	color: white;
 	padding: 2vh;
-  height: 14vh;
+    height: 14vh;
 	background-color: #297AC5;
 }
 
@@ -57,9 +57,9 @@ li a:hover {
 
 
 .lang {
-	position: absolute;
-  top:2vh;
-  right:5vh;
+  position: absolute;
+  top:1vh;
+  right:7vh;
   float:right;
 }
 
@@ -96,10 +96,11 @@ background-color: #F5F5F5;
 
 .SfondoTitolo {
 position: absolute;
+margin: 0 auto;
 text-align: center;
-width: 30vh;
-height: 10vh;
-left:85vh;
+width: 44vh;
+height: 12vh;
+left: 80vh;
 top: 1vh;
 border-top-right-radius: 40%;
 border-top-left-radius: 40%;
@@ -114,7 +115,7 @@ background: linear-gradient(360deg, #297AC5 0%, rgba(7, 114, 214, 0) 100%),
 }
 
 .Titolo{
-  font-size: 6vh;
+  font-size: 9vh;
 font-family: 'Salsa';
   margin-top:2vh;
 }

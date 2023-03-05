@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    
+
+    <link rel="shortcut icon" href="images\PPM.ico" type="image/x-icon"> 
+
+    <link rel="stylesheet" href="css\generalCss.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+    <title>TaranTour</title>
+    
+    <style>
+
+    .card {
+        width: 70%;
+        position:fixed;
+        right: 12vh;
+        top: 17vh;
+        padding: 1%;
+        border: 2px solid darkgray;
+        border-radius: 20px;
+    }
+    
+
+datalist {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  writing-mode: horizontal-tb;
+
+}
+
+option {
+  padding: 0;
+}
+
+    </style>
+    
+  </head>
+  <body>
+    <header>
+      
+      <img class="Logo"src="images\logo.jpg">
+      
+      <div class="SfondoTitolo">
+    	<h1 class="Titolo"> TaranTour </h1>
+      </div>
+
+    <div class="lang dropdown">
+      <button class="btn" type="button" data-toggle="dropdown" > <img class="imag" src="images\ita.png"> <label class="cool">  Italiano </label> <span class="caret cool"></span></button>
+      <ul class="dropdown-menu">
+        <li class="text-center lig"> <img class="imag" src="images\ing.png"> <label> English </label> </li>
+        <li class="text-center lig"> <img class="imag" src="images\fra.png"> <label> French </label> </li>
+        <li class="text-center lig"> <img class="imag" src="images\spa.png"> <label> Spanish </label> </li>
+        <li class="text-center lig"> <img class="imag" src="images\det.png"> <label> German </label> </li>
+      </ul>
+    </div>
+
+  
+    </header>
+    
+    <div>
+    <ul class="text-center">
+  			<li><a href="Introduzione.html">Introduzione</a></li>
+  			<li><a class="selected" href="Storia.html">Storia</a></li>
+  			<li><a href="Attrazioni.html">Attrazioni</a></li>
+  			<li><a href="Trad_Fest.html">Tradizioni e festività</a></li>
+  			<li><a href="Eventi.html">Eventi</a></li>
+  			<li><a href="Chi_Siamo.html">Chi siamo?</a></li>
+  			<li><a href="#" class="exit">Esci</a></li>
+	</ul>
+    </div>
+    
+
+    <!-- INIZIO CONTENT -->
+<div class="card">
+
+<!-- <input type="range" value="1" min="1" max="7" oninput="this.nextElementSibling.value = this.value">
+
+<input id="myRange" type="range" value="1" min="1" max="7" oninput="this.nextElementSibling.value = this.value"> 
+<output>1</output>-->
+
+<input id="myRange" type="range" id="tempB" name="temp" min="1" max="7" value="1" list="values" />
+
+<datalist id="values">
+  <option value="1" label="Date 1"></option>
+  <option value="2" label="Date 2"></option>
+  <option value="3" label="Date 3"></option>
+  <option value="4" label="Date 4"></option>
+  <option value="5" label="Date 5"></option>
+  <option value="6" label="Date 6"></option>
+  <option value="6" label="Date 7"></option>
+</datalist>
+
+<script>
+ 
+$("#myRange").change(function(){
+    var value = $(this).val();
+    switch (value) { 
+    case "2": 
+        alert("imma gay");
+        break;
+		   }   
+
+});
+ 
+</script>
+
+
+ </div>
+
+ </body>
+ </html>

@@ -11,9 +11,12 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
   
   
   
@@ -27,9 +30,76 @@
 
     <title>TaranTour</title>
     
+    <style>
+
+    .card {
+        width: 70%;
+        position:fixed;
+        right: 12vh;
+        top: 17vh;
+        padding: 1%;
+        border: 2px solid darkgray;
+        border-radius: 20px;
+    }
+    
+    p {
+    font-size: 2.5vh;
+    font-family: 'Salsa';
+    color: #666666;
+    }
+    
+
+
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes shadow-pulse-big
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 70px rgba(0, 0, 0, 0);
+  }
+}
+
+.example-1
+{position: fixed;
+    top: 35vh;
+    left: 60vh;
+  width: 3%;
+  color: #fff;
+  background: rgba(30, 144, 255, 0.8);
+  border-radius: 50%;
+  animation: shadow-pulse 1s infinite;
+}
+
+.example-1:hover {
+animation: none;
+}
+
+.popover-title {
+    font-size: 2.5vh;
+    font-family: 'Salsa';
+    font-weight: bolder;
+}
+.popover-content {
+    font-size: 1.8vh;
+    font-family: 'Salsa';
+}
+
+    </style>
+    
   </head>
   <body>
-    <header >
+    <header>
       
       <img class="Logo"src="images\logo.jpg">
       
@@ -38,7 +108,7 @@
     	<h1 class="Titolo"> TaranTour </h1>
       </div>
 
-    <div class="lang dropdown" >
+    <div class="lang dropdown">
       <button class="btn" type="button" data-toggle="dropdown" > <img class="imag" src="images\ita.png"> <label class="cool">  Italiano </label> <span class="caret cool"></span></button>
       <ul class="dropdown-menu">
         <li class="text-center lig"> <img class="imag" src="images\ing.png"> <label> English </label> </li>
@@ -51,15 +121,74 @@
   
     </header>
     
+    <div>
     <ul class="text-center">
-  			<li><a class="selected" href="#">Introduzione</a></li>
-  			<li><a href="#">Storia</a></li>
-  			<li><a href="#">Attrazioni</a></li>
-  			<li><a href="#">Tradizioni e festività</a></li>
-  			<li><a href="#">Eventi</a></li>
-  			<li><a href="#">Chi siamo?</a></li>
-  			<li><a href="#" class="exit">Esci</a></li>
+  			<li><a class="selected" href="Introduzione.html">Introduzione</a></li>
+  			<li><a href="Storia.html">Storia</a></li>
+  			<li><a href="Attrazioni.html">Attrazioni</a></li>
+  			<li><a href="Trad_Fest.html">Tradizioni e festività</a></li>
+  			<li><a href="Eventi.html">Eventi</a></li>
+  			<li><a href="Chi_Siamo.html">Chi siamo?</a></li>
+  			<li><a class="exit" >Esci</a></li>
 	</ul>
- 
+    </div>
+    
+
+    <!-- INIZIO CONTENT -->
+    <div class="card">
+    
+    <div class="example-1" data-toggle="popover" title="Castello Aragonese" data-content="Uno dei maggiori punti di forza della città di Taranto e offre una splendida vista panoramica sulla città di Taranto e sul golfo, rendendolo una meta turistica molto popolare nella regione Puglia.">
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+    </svg>
+    </div>
+    
+   <script>
+  
+    
+    $(document).ready(function() {
+   $("[data-toggle=popover]").popover({
+      placement: 'right',
+
+   }).on("mouseenter", function () {
+        var _this = this;
+        $(this).popover("show");
+        $(".example-1").css("animation", "none"); 
+        $(this).siblings(".popover").on("mouseleave", function () {
+            $(_this).popover('hide');
+            $(".example-1").css("animation", "shadow-pulse 1s infinite")
+            
+        });
+    }).on("mouseleave", function () {
+        var _this = this;
+        setTimeout(function () {
+            if (!$(".popover:hover").length) {
+                $(_this).popover("hide")
+            }
+        }, 100);
+    });
+    });
+    
+    
+    
+    </script>
+    
+    
+        
+        <p> <img src="images/cast_arag.png" style="width: 55%; float: left; padding-right: 1.5%;">
+        
+        Taranto è una città italiana situata nella regione Puglia, sulla costa del Mar Ionio. È la terza città più grande della Puglia dopo Bari e Lecce, con una popolazione di circa 200.000 abitanti. <br> <br>
+
+        Taranto è famosa per la sua storia antica e il suo porto naturale, che ha fatto della città un importante centro commerciale e marittimo sin dall'antichità. In epoca greca, Taranto era nota come Taras ed era una città molto importante della Magna Grecia, con una ricca cultura e un'economia fiorente. <br>
+
+        Oggi, Taranto è conosciuta anche per la sua industria pesante, in particolare l'industria siderurgica. La città è sede di importanti impianti industriali, tra cui il più grande stabilimento siderurgico d'Europa, ma negli ultimi anni si sta cercando di sviluppare anche il turismo, valorizzando le sue bellezze naturali e i suoi tesori artistici e culturali. <br><br>
+
+        Tra i principali luoghi di interesse di Taranto ci sono il Castello Aragonese, un'imponente fortezza risalente al XV secolo che domina la città, il Museo Archeologico Nazionale, che ospita importanti reperti della Magna Grecia e del periodo romano, e la Città Vecchia, un quartiere medievale con strette stradine e caratteristiche abitazioni in pietra. <br>
+
+        Inoltre, Taranto è circondata da splendide spiagge, alcune delle quali sono tra le più belle della Puglia, come ad esempio la Spiaggia di San Vito e la Spiaggia di Lido Gandoli. </p>
+    </div>
+
  </body>
  </html>

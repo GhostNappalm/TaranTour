@@ -119,3 +119,14 @@ background: linear-gradient(360deg, #297AC5 0%, rgba(7, 114, 214, 0) 100%),
 font-family: 'Salsa';
   margin-top:2vh;
 }
+
+
+.mappa{
+  position: absolute;
+  right:0vh;
+  bottom: 0vh;
+  width: 166vh;
+  height: 86vh;
+  background: url("../images/mappa1.png") no-repeat center center fixed;
+   background-size: cover;
+}

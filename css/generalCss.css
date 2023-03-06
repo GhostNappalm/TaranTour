@@ -61,6 +61,8 @@ li a:hover {
   top:1vh;
   right:7vh;
   float:right;
+ cursor: pointer;
+  
 }
 
 .imag {
@@ -69,6 +71,7 @@ li a:hover {
 
 .cool {
 color: white;
+cursor: pointer;
 }
 
 
@@ -83,6 +86,17 @@ top:1vh;
 left:5vh;
 mix-blend-mode: color-burn;
 }
+
+
+.tooltip-inner {
+  background-color: #fff; /* white */
+  color: #000; /* black */
+  font-size: 20px;
+
+}
+
+
+
 
 label {
 padding-left: 1vh;
@@ -119,3 +133,13 @@ background: linear-gradient(360deg, #297AC5 0%, rgba(7, 114, 214, 0) 100%),
 font-family: 'Salsa';
   margin-top:2vh;
 }
+
+.la{
+margin-left: 15px;
+background-color: transparent;
+border: none;
+padding: 0px;
+}
+
+
+

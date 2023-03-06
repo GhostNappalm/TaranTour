@@ -36,8 +36,8 @@ li a {
 
 
 li a:hover {
-  background-color: #C2DDFF;
-  color:black;
+  background-color:#91C2FFFF;
+  color: white;
   text-decoration: none;
 }
 
@@ -96,7 +96,7 @@ background-color: #F5F5F5;
 
 .SfondoTitolo {
 position: absolute;
-margin: 0 auto;
+margin: 0 ;
 text-align: center;
 width: 44vh;
 height: 12vh;
@@ -116,17 +116,21 @@ background: linear-gradient(360deg, #297AC5 0%, rgba(7, 114, 214, 0) 100%),
 
 .Titolo{
   font-size: 9vh;
-font-family: 'Salsa';
+  font-family: 'Salsa';
   margin-top:2vh;
 }
 
 
 .mappa{
   position: absolute;
-  right:0vh;
-  bottom: 0vh;
-  width: 166vh;
-  height: 86vh;
-  background: url("../images/mappa1.png") no-repeat center center fixed;
-   background-size: cover;
+  top:14vh;
+  left:40vh;
+  width: 160vh;
+  height: 100vh;
+
+
+
+  background: url("../images/mappa1.png") no-repeat center center ;
+  background-size: cover;
+
 }

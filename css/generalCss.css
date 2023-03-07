@@ -161,7 +161,7 @@ z-index: 1;
   top:20vh;
   left: 50vh;
   z-index: 3;
-  border-radius: 15%;
+  border-radius: 10%;
 
   background: url("../images/mappaApp.jpg") no-repeat center center ;
   background-size: cover;

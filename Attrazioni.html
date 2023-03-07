@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     
 
+    <!-- ICONS -->
     <link rel="shortcut icon" href="images\PPM.ico" type="image/x-icon"> 
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css\generalCss.css">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+    <script type="text/javascript" src="js/generalJS.js"></script>
 
 
     <title>TaranTour</title>
@@ -202,9 +205,7 @@
 
 
   <script>
-     $('.veloGrigio').addClass('hidden');
-     $('.mappaApp').addClass('hidden');
-     $('.posAttuale').addClass('hidden');
+
      $(document).ready(function() {
       
       $("[data-toggle=popover]").popover({
@@ -240,24 +241,9 @@
       $("[data-toggle=popover]").popover('show');
       $("[data-toggle=popover]").popover('hide');
 
-      $( ".mappaAppIcon , #closeBtn" ).click(function() {
-        if ($('.veloGrigio').hasClass('hidden')) {
-           $('.veloGrigio').removeClass('hidden');
-           $('.mappaApp').removeClass('hidden');
-           $('.posAttuale').removeClass('hidden');
-        }
-        else{
-            $('.veloGrigio').addClass('hidden');
-            $('.mappaApp').addClass('hidden');
-            $('.posAttuale').addClass('hidden');
-          }
-          });
-
       });
 
-    $('[data-toggle="tooltip"]').tooltip({
-      placement: 'left'
-  });
+
 
 
 

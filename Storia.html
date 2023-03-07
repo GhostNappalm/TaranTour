@@ -15,23 +15,47 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="story.js"></script>
 
 
     <title>TaranTour</title>
     
     <style>
-
-    .card {
+    
+    
+     .lin {
+         width: 70%;
+        position:fixed;
+        right: 12vh;
+        top: 18vh;
+        padding: 1%;
+        border-radius: 20px;
+         border: transparent;
+     }
+     
+     section {
         width: 70%;
         position:fixed;
         right: 12vh;
-        top: 17vh;
+        top: 30vh;
         padding: 1%;
         border: 2px solid darkgray;
-        border-radius: 20px;
+        border-radius: 20px;   
+     }
+     
+     h2 {
+         font-size: 4vh;
+         font-family: 'Salsa';
+     }
+         p {
+    font-size: 2.5vh;
+    font-family: 'Salsa';
+    color: #666666;
     }
     
 
@@ -43,6 +67,13 @@ datalist {
 
 }
 
+datalist option {
+  font-family: 'Salsa';
+  font-size: 22px;
+  font-weight: bold;
+
+}
+
 option {
   padding: 0;
 }
@@ -50,7 +81,7 @@ option {
     </style>
     
   </head>
-  <body>
+  <body onload="stor()">
     <header>
       
       <img class="Logo"src="images\logo.jpg">
@@ -86,41 +117,142 @@ option {
     
 
     <!-- INIZIO CONTENT -->
-<div class="card">
+<div class="card lin">
 
 <!-- <input type="range" value="1" min="1" max="7" oninput="this.nextElementSibling.value = this.value">
 
 <input id="myRange" type="range" value="1" min="1" max="7" oninput="this.nextElementSibling.value = this.value"> 
 <output>1</output>-->
 
-<input id="myRange" type="range" id="tempB" name="temp" min="1" max="7" value="1" list="values" />
+<input id="myRange" type="range" id="tempB" name="temp" min="1" max="8" value="1" list="values" />
 
 <datalist id="values">
-  <option value="1" label="Date 1"></option>
-  <option value="2" label="Date 2"></option>
-  <option value="3" label="Date 3"></option>
-  <option value="4" label="Date 4"></option>
-  <option value="5" label="Date 5"></option>
-  <option value="6" label="Date 6"></option>
-  <option value="6" label="Date 7"></option>
+  <option value="1" label="VII a.c."></option>
+  <option value="2" label="III a.c."></option>
+  <option value="3" label="XI d.c."></option>
+  <option value="4" label="XVI d.c."></option>
+  <option value="5" label=" XVII d.c."></option>
+  <option value="6" label="XIX d.c"></option>
+  <option value="7" label="XX d.c."></option>
+  <option value="8" label=" XXI d.c."></option>
 </datalist>
 
-<script>
- 
-$("#myRange").change(function(){
-    var value = $(this).val();
-    switch (value) { 
-    case "2": 
-        alert("imma gay");
-        break;
-		   }   
-
-});
- 
-</script>
 
 
  </div>
+ 
+ 
+ <div class="container">
+ 
+ <section>
+       <h2 class="text-center"> Nascita (VII a.c.) </h2>
+
+      <p> Il VII secolo a.C. è un periodo importante nella storia di Taranto, in quanto la città iniziò a svilupparsi come uno dei principali centri della Magna Grecia.
+
+Durante il VII secolo a.C., Taranto era abitata dai Messapi, un popolo di origine illirica che si era stabilito nella regione. Tuttavia, durante questo periodo, la città fu conquistata dagli Ioni, un popolo greco proveniente dalla costa dell'Asia Minore. Gli Ioni portarono con sé la cultura e la tecnologia greca, che ebbero un grande impatto sulla città di Taranto.
+<br>
+Sotto il dominio ionico, Taranto divenne un importante centro commerciale e una potenza militare nella regione. La città era famosa per la sua produzione di ceramica, che divenne un'importante fonte di reddito. Taranto si estese rapidamente, con l'edificazione di nuovi quartieri e l'espansione delle mura della città.
+<br>
+Durante il VII secolo a.C., Taranto divenne anche un importante centro religioso. La città era famosa per il suo tempio dedicato a Poseidone, il dio del mare. Il tempio era situato su un'isola al largo della costa, ed era considerato uno dei più importanti santuari della Magna Grecia.
+<br>
+Tuttavia, il VII secolo a.C. fu anche un periodo di instabilità per Taranto. La città dovette affrontare molte guerre e conflitti con i popoli vicini, tra cui i Messapi, i Lucani e i Peuceti. Inoltre, la città fu colpita da disastri naturali, tra cui terremoti e inondazioni.
+<br>
+Nonostante queste difficoltà, Taranto continuò a crescere e prosperare nel VII secolo a.C. La città sarebbe diventata uno dei principali centri della Magna Grecia, con una cultura e una civiltà che avrebbero influenzato profondamente la storia della regione per molti secoli a venire. 
+
+ </p>
+      </div>
+ </section>
+ 
+ 
+  <section>
+ 
+       <h2 class="text-center"> Dall'apogeo alla caduta nella Magna Grecia (III a.c.) </h2>
+
+      <p> 
+
+Il III secolo a.C. è un periodo molto importante nella storia di Taranto, in quanto la città raggiunse il suo massimo splendore e diventò una delle più importanti città della Magna Grecia.
+<br>
+Durante il III secolo a.C., Taranto era governata dalla dinastia dei Pirro, che aveva preso il controllo della città alla fine del IV secolo a.C. Pirro era un re dell'Epiro, una regione dell'attuale Grecia, che aveva conquistato Taranto e aveva stabilito il suo regno nella città.
+<br>
+Sotto il governo dei Pirro, Taranto raggiunse il suo massimo splendore. La città era una delle più ricche e potenti della Magna Grecia, con una grande flotta navale e un esercito ben addestrato. Taranto era un importante centro commerciale, con legami commerciali con altre città greche e romane.
+<br>
+Durante il III secolo a.C., Taranto fu coinvolta in molte guerre e conflitti, tra cui la guerra contro Roma. Nel 272 a.C., Taranto fu attaccata dai Romani, che avevano deciso di conquistare la città per espandere il loro impero. Taranto fu in grado di resistere all'assedio romano per tre anni, grazie alla sua fortezza e alla sua flotta navale. Tuttavia, nel 269 a.C., la città cadde nelle mani dei Romani, ponendo fine al regno dei Pirro a Taranto.
+<br>
+Tuttavia, alla fine del III secolo a.C., Taranto fu nuovamente coinvolta in conflitti e guerre, questa volta contro altre città della Magna Grecia. La città subì molte sconfitte e la sua influenza diminuì gradualmente. Taranto sarebbe stata conquistata dai Romani definitivamente nel 209 a.C., ponendo fine al suo periodo di splendore come una delle città più importanti della Magna Grecia.
+      
+      
+       </p>
+      </div>
+ </section>
+ 
+ 
+   <section>
+ 
+       <h2 class="text-center"> La città fortificata sotto il governo normanno (XI d.c.) </h2>
+
+      <p> 
+      
+      Durante il XI secolo d.C., Taranto fu governata da vari signori feudali che si succedettero nel controllo della città. La città si trovava in una posizione strategica, al centro del Mediterraneo, e questo la rendeva una meta ambita per i commercianti e i pirati che navigavano nelle rotte commerciali tra l'Europa e l'Oriente.
+<br>
+Taranto era una città fortificata, circondata da mura e difese da un castello e da una serie di torri di avvistamento. La città era anche dotata di un porto, che era il centro della sua attività commerciale. Durante il XI secolo, Taranto divenne un importante centro di produzione di tessuti, che venivano esportati in tutta Europa.
+<br>
+Durante questo periodo, Taranto fu coinvolta in molte guerre e conflitti, tra cui la guerra tra Normanni e Bizantini per il controllo dell'Italia meridionale. Nel 1066, Taranto fu conquistata dai Normanni di Roberto il Guiscardo, che stabilirono il loro controllo sulla città e sulla regione circostante.
+<br>
+Con la conquista normanna, Taranto divenne un importante centro politico e culturale della regione. I Normanni fecero molte riforme amministrative e giuridiche nella città, che divenne un importante centro per le arti e le scienze. Taranto divenne anche un importante centro religioso, con la costruzione di molte chiese e monasteri. 
+<br>
+Tuttavia, durante il XII secolo, Taranto fu coinvolta in molte guerre e conflitti, tra cui la lotta tra il Papa e l'Imperatore Federico Barbarossa per il controllo dell'Italia meridionale. Nel 1156, Taranto fu distrutta da un incendio, che causò la morte di molti abitanti della città. Nonostante la ricostruzione, Taranto perse gradualmente il suo potere e la sua influenza nella regione.
+</p>
+      </div>
+ </section>
+ 
+    <section>
+ 
+       <h2 class="text-center"> Città strategica e culturale del Regno di Napoli (XVI d.c.) </h2>
+
+      <p> 
+      
+      Durante il XVI secolo d.C., Taranto era una città importante del Regno di Napoli. La città si trovava in una posizione strategica sul Mar Ionio e aveva un porto che la rendeva un importante centro commerciale per l'intero Mediterraneo.
+<br>
+Taranto era governata da un viceré nominato dal re di Spagna, che aveva il controllo della città e della regione circostante. Durante questo periodo, Taranto fu coinvolta in molte guerre e conflitti, tra cui la guerra tra il Regno di Napoli e l'Impero Ottomano.
+<br>
+Taranto fu anche un importante centro culturale durante il XVI secolo, con la costruzione di numerose chiese, palazzi e monumenti. Durante questo periodo, Taranto fu influenzata dalla cultura rinascimentale italiana, con la costruzione di numerose opere d'arte e l'introduzione di nuove tecniche artistiche.
+<br>
+Taranto fu anche una città militare importante durante il XVI secolo, con la costruzione di numerose fortificazioni e bastioni per proteggere la città dagli attacchi nemici. La città fu anche dotata di un arsenale, che fu utilizzato per costruire e riparare navi da guerra.
+<br>
+Durante il XVI secolo, Taranto fu anche coinvolta nella diffusione del Cristianesimo nelle Americhe, grazie all'attività missionaria dei francescani e dei domenicani che operavano nella città.
+<br>
+In sintesi, durante il XVI secolo d.C., Taranto fu una città importante del Regno di Napoli, coinvolta in molte guerre e conflitti e dotata di numerose fortificazioni e bastioni. Taranto fu anche un importante centro culturale e religioso, influenzato dalla cultura rinascimentale italiana, e un importante centro commerciale nel Mediterraneo.
+</p>
+      </div>
+ </section>
+ 
+ 
+     <section>
+ 
+       <h2 class="text-center"> Cultura, religione e influenza barocca (XVII d.c.) </h2>
+
+      <p> 
+   <br>   
+Durante il XVII secolo d.C., Taranto era ancora una città importante del Regno di Napoli, ma non aveva più la stessa importanza strategica e commerciale del passato. Tuttavia, la città continuò ad essere un importante centro culturale e religioso.
+<br>
+Durante questo periodo, Taranto fu governata da un governatore nominato dal re di Spagna. La città fu coinvolta in pochi conflitti durante il XVII secolo, ma subì gli effetti della guerra tra il Regno di Napoli e l'Impero Ottomano.
+<br>
+Si verificarono inoltre molte calamità naturali, tra cui terremoti e epidemie di peste. Tuttavia, la città fu in grado di ricostruirsi e di continuare la sua attività culturale e religiosa.
+<br>
+Durante il XVII secolo, Taranto fu influenzata dalla cultura barocca, con la costruzione di numerose chiese e palazzi in questo stile artistico. Taranto fu anche un importante centro religioso, con la costruzione di numerose chiese e monasteri e l'attività di ordini religiosi come i francescani e i domenicani.
+<br>
+Inoltre, Taranto fu coinvolta nell'esplorazione delle Americhe, grazie all'attività missionaria dei francescani e dei domenicani che operavano nella città.
+<br>
+In sintesi, durante il XVII secolo d.C., Taranto perse la sua importanza strategica e commerciale ma continuò ad essere un importante centro culturale e religioso, influenzato dalla cultura barocca e coinvolto nell'esplorazione delle Americhe.
+
+</p>
+      </div>
+ </section>
+ 
+ </div>
+ 
+
+ 
 
  </body>
  </html>

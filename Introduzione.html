@@ -82,7 +82,7 @@
 }
 
 .example-1:hover {
-animation: none;
+  animation: none;
 }
 
 .popover-title {
@@ -93,6 +93,10 @@ animation: none;
 .popover-content {
     font-size: 1.8vh;
     font-family: 'Salsa';
+}
+
+.pop_1 {
+background-color: black;
 }
 
     </style>
@@ -108,13 +112,20 @@ animation: none;
     	<h1 class="Titolo"> TaranTour </h1>
       </div>
 
-    <div class="lang dropdown">
-      <button class="btn" type="button" data-toggle="dropdown" > <img class="imag" src="images\ita.png"> <label class="cool">  Italiano </label> <span class="caret cool"></span></button>
+
+    <div class="lang dropdown" data-toggle="tooltip" title="Lingua">
+  
+  <!-- <button data-toggle="tooltip" title="Laa">Hover over me</button> -->
+
+      <div class="la" type="button" data-toggle="dropdown"> 
+        <img class="imag" src="images\ita.png"> <label class="cool">  Italiano </label> <span class="caret cool"></span>
+        </div>
+
       <ul class="dropdown-menu">
-        <li class="text-center lig"> <img class="imag" src="images\ing.png"> <label> English </label> </li>
-        <li class="text-center lig"> <img class="imag" src="images\fra.png"> <label> French </label> </li>
-        <li class="text-center lig"> <img class="imag" src="images\spa.png"> <label> Spanish </label> </li>
-        <li class="text-center lig"> <img class="imag" src="images\det.png"> <label> German </label> </li>
+        <li class="text-center lig"> <img class="imag" src="images\ing.png"> <label style="cursor:pointer"> English </label> </li>
+        <li class="text-center lig"> <img class="imag" src="images\fra.png"> <label style="cursor:pointer"> French </label> </li>
+        <li class="text-center lig"> <img class="imag" src="images\spa.png"> <label style="cursor:pointer"> Spanish </label> </li>
+        <li class="text-center lig"> <img class="imag" src="images\det.png"> <label style="cursor:pointer"> German </label> </li>
       </ul>
     </div>
 
@@ -137,7 +148,7 @@ animation: none;
     <!-- INIZIO CONTENT -->
     <div class="card">
     
-    <div class="example-1" data-toggle="popover" title="Castello Aragonese" data-content="Uno dei maggiori punti di forza della città di Taranto e offre una splendida vista panoramica sulla città di Taranto e sul golfo, rendendolo una meta turistica molto popolare nella regione Puglia.">
+    <div class="example-1" id="poop" data-toggle="popover" title="Castello Aragonese" data-content="Uno dei maggiori punti di forza della città di Taranto e offre una splendida vista panoramica sulla città di Taranto e sul golfo, rendendolo una meta turistica molto popolare nella regione Puglia.">
   
     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -147,9 +158,19 @@ animation: none;
     
    <script>
   
+  $(document).ready(function(){
+      
+      
+  $('[data-toggle="tooltip"]').tooltip({
+      placement: 'left'
+  });   
+  
+  
+});
+
     
     $(document).ready(function() {
-   $("[data-toggle=popover]").popover({
+   $("[id=poop]").popover({
       placement: 'right',
 
    }).on("mouseenter", function () {
@@ -158,14 +179,15 @@ animation: none;
         $(".example-1").css("animation", "none"); 
         $(this).siblings(".popover").on("mouseleave", function () {
             $(_this).popover('hide');
-            $(".example-1").css("animation", "shadow-pulse 1s infinite")
+            $(".example-1").css("animation", "shadow-pulse 1s infinite");
             
         });
     }).on("mouseleave", function () {
         var _this = this;
         setTimeout(function () {
             if (!$(".popover:hover").length) {
-                $(_this).popover("hide")
+                $(_this).popover("hide");
+                $(".example-1").css("animation", "shadow-pulse 1s infinite");
             }
         }, 100);
     });

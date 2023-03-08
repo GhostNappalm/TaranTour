@@ -16,9 +16,11 @@
     <!-- JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="js/generalJS.js"></script>
+    
 
 
     <title>TaranTour</title>
@@ -50,12 +52,14 @@
        transition:0.5s;
       }
 
-      .Pin{
+      .poss .Pin{
         position: absolute;
+        top: 20hv;
         width: 3%;
         color: #fff;
         border-radius: 50%;
       }
+
 
     </style>
 
@@ -64,7 +68,7 @@
   <body>
     <header>
       
-      <img class="Logo"src="images\logo.jpg">
+      <img class="Logo"src="images\logo.png">
       
 
       <div class="SfondoTitolo">
@@ -93,22 +97,16 @@
   
   </header>
 
-  <script>
-    $('[data-toggle="tooltip"]').tooltip({
-      placement: 'left',
-  }); 
-  </script>
-     
         <!-- Mappa APP -->
         <div class="veloGrigio"> </div>
-        <div class="mappaApp">
+        <div class="mappaApp">  
         <svg id="closeBtn" xmlns="http://www.w3.org/2000/svg" fill="red"  class="bi bi-x-circle" viewBox="0 0 16 16">
             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
         </svg>
         </div>
-        <div class="posAttuale">
-            <p style=" font-size: 2.5vh;font-weight: bold; position: relative; top: 5vh; left:3vh;color: #4a8fe7 ; ">Sei qui</p>
+        <div class="posAttuale" style="top:33.3vh; left: 93vh;">
+            <p style=" font-size: 2.5vh;font-weight: bold; position: relative; top: 6vh; left:4vh;color: #4a8fe7 ; ">Sei qui</p>
         </div>
 
         <!-- Side Menu -->
@@ -122,91 +120,92 @@
         <li><a class="exit" >Esci</a></li>
     </ul>
   <!-- INIZIO CONTENT -->
-  <div class="mappa"> 
+  <div class="mappa"> </div>
 
+  <div class="poss">
     
-    <div class="Pin" style="top: 57vh;left: 67vh; " src="images/cast_arag.png" data-toggle="popover" title="Castello Aragonese" data-content="<img src='images/cast_arag.png' style='width:40vh; float:left; padding: 0vh 2vh 1vh 0vh'>
+    <div class="Pin" style="top: 71vh;left: 107vh; " src="images/cast_arag.png" data-toggle="popover" title="Castello Aragonese" data-content="<img src='images/cast_arag.png' style='width:40vh; float:left; padding: 0vh 2vh 1vh 0vh'>
     
     Il Castello Aragonese di Taranto è un'antica fortezza situata sull'isola di San Pietro, al largo della città.La struttura del castello risale al XV secolo, ma i suoi fondamenti risalgono all'epoca romana. Il castello fu utilizzato come fortezza militare e prigione nel corso della sua storia. Oggi è aperto al pubblico e ospita mostre ed eventi culturali. Il castello si trova su una collina e offre una vista panoramica sulla città di Taranto e sul mare circostante.Il Castello Aragonese ha una forma poligonale e presenta diverse torri, bastioni e mura difensive che testimoniano la sua funzione di fortificazione militare. All'interno del castello si trovano la cappella di San Pietro e il Museo Archeologico Nazionale di Taranto, che ospita importanti collezioni di reperti archeologici della Magna Grecia e dell'epoca romana.">
-      <svg class="marker" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
+      <svg data-toggle="tooltip" title="Castello Aragonese"  placement="bottom" class="marker right" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
       </svg>
     </div>
 
-    <div class="Pin" style="top: 52vh;left: 73vh;" src="images/cast_arag.png" data-toggle="popover" 
+    <div class="Pin" style="top: 66vh;left: 113vh;" data-toggle="popover" 
     title="Ponte Girevole" 
     data-content="<img src='images/ponte_girevole.jfif' style='width:40vh; float:left; padding: 0vh 2vh 1vh 0vh'>
     
     Il Ponte girevole di Taranto è un ponte strallato che attraversa il Mar Grande e collega la città di Taranto con la zona industriale di Talsano. La sua caratteristica principale è la possibilità di ruotare su se stesso, permettendo il passaggio delle navi di grandi dimensioni che si dirigono verso il porto di Taranto.
     Inaugurato nel 1887, il ponte è stato uno dei primi ponti girevoli costruiti in Italia. La sua struttura metallica ha una lunghezza di circa 90 metri e un'altezza di circa 15 metri. Il ponte è supportato da due grandi piloni di cemento armato e da numerosi cavi in acciaio, che conferiscono alla struttura una notevole stabilità.
     ">
-      <svg class="marker" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
+      <svg data-toggle="tooltip" title="Ponte Girevole" class="marker right" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
       </svg>
     </div>
   
-    <div class="Pin" style="top: 48vh;left: 90vh;" src="images/MArTA.jpg" data-toggle="popover" 
+    <div class="Pin" style="top: 62vh;left: 130vh;" src="images/MArTA.jpg" data-toggle="popover" 
     title="MArTa - Museo Archeologico Nazionale" 
     data-content="<img src='images/MArTA.jpg' style='width:40vh; float:left; padding: 0vh 2vh 1vh 0vh'>
     
     Il MArTA - Museo Archeologico Nazionale di Taranto è uno dei più importanti musei archeologici d'Italia, situato nella città di Taranto. Il museo è stato fondato nel 1887 e si trova all'interno dell'antico convento dei Padri Domenicani, in piazza Maria Immacolata.
 
     Il MArTA ospita una vasta collezione di reperti archeologici che coprono un arco temporale che va dall'età del Bronzo all'età romana. La collezione del museo è stata arricchita nel corso degli anni grazie a importanti scoperte archeologiche effettuate nella zona di Taranto e in altre parti della Puglia.">
-      <svg class="marker" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
+      <svg data-toggle="tooltip" title="Museo MarTa" class="marker right" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
       </svg>
     </div>
 
-    <div class="Pin" style="top: 36vh;left: 45vh;" src="images/citta_vecchia.jpg" data-toggle="popover" 
+    <div class="Pin" style="top: 48vh;left: 86vh;" data-toggle="popover" 
     title="Città vecchia" 
     data-content="<img src='images/citta_vecchia.jpg' style='width:40vh; float:left; padding: 0vh 2vh 1vh 0vh'>
     
     La città vecchia di Taranto è il cuore storico della città pugliese, situata sulla costa ionica della regione. La città vecchia, conosciuta anche come Taranto vecchia, è un labirinto di stradine e vicoli stretti, circondati da mura di epoca medievale.
 
     La città vecchia di Taranto è caratterizzata da un'architettura tipica delle città del sud Italia, con palazzi antichi, chiese barocche e archi e portali in pietra leccese. Tra le principali attrazioni della città vecchia si segnalano la Cattedrale di San Cataldo, il Castello Aragonese, la Chiesa di San Domenico Maggiore e la Chiesa di San Pietro Martire.">
-      <svg class="marker" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
+      <svg data-toggle="tooltip" title="Città Vecchia" class="marker right" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
       </svg>
     </div>
 
-    <div class="Pin" style="top: 71vh;left: 84vh;" src="images/palazzo_governo.jpg" data-toggle="popover" 
+    <div class="Pin" style="top: 85vh;left: 124vh;" src="images/palazzo_governo.jpg" data-toggle="popover" 
     title="Palazzo del Governo " 
     data-content="<img src='images/palazzo_governo.jpg' style='width:40vh; float:left; padding: 0vh 2vh 1vh 0vh'>
     
     Il Palazzo del Governo di Taranto è un importante edificio pubblico situato nella città vecchia di Taranto, in Puglia. Il palazzo fu costruito alla fine del XIX secolo e fu utilizzato come sede del governo italiano durante il periodo fascista. Oggi, il Palazzo del Governo ospita la Prefettura di Taranto e altre importanti istituzioni pubbliche.
 
     Il Palazzo del Governo di Taranto è uno dei più imponenti edifici della città vecchia, con una facciata in stile neoclassico, caratterizzata da un portico a colonne e da un balcone centrale. L'interno del palazzo è decorato con affreschi e opere d'arte che celebrano la storia e la cultura della Puglia.">
-      <svg class="marker" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
+      <svg data-toggle="tooltip" title="Palazzo Governo" class="marker right" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
       </svg>
     </div>
 
-    <div class="Pin" style="top: 62vh;left: 74vh;" src="images/monumento_marinai.jpg" data-toggle="popover" 
+    <div class="Pin" style="top: 76vh;left: 114vh;" src="images/monumento_marinai.jpg" data-toggle="popover" 
     title="Monumento al Marinaio " 
     data-content="<img src='images/monumento_marinai.jpg' style='width:40vh; float:left; padding: 0vh 2vh 1vh 0vh'>
     
     Il Monumento ai Marinai di Taranto è un importante monumento commemorativo situato sul lungomare della città, di fronte al Mar Grande. Il monumento è stato realizzato per onorare la memoria dei marinai italiani che persero la vita durante la Seconda Guerra Mondiale.
 
     Il monumento fu inaugurato nel 1960 e fu realizzato su progetto dell'architetto tarantino Pietro Aschieri. La struttura è alta circa 33 metri ed è composta da quattro piloni in cemento armato, che rappresentano le quattro sezioni della Marina Militare italiana: la Marina Mercantile, la Marina Militare, la Marina Ausiliaria e la Guardia Costiera.">
-      <svg class="marker" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
+      <svg data-toggle="tooltip" title="Monumento al Marinaio" class="marker right" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
       </svg>
     </div>
 
-    <div class="Pin" style="top: 48vh;left: 109vh;" src="images/villa_peripato.webp" data-toggle="popover" 
+    <div class="Pin" style="top: 59vh;left: 148vh;" src="images/villa_peripato.webp" data-toggle="popover" 
     title="Villa Peripato " 
     data-content="<img src='images/villa_peripato.webp' style='width:40vh; float:left; padding: 0vh 2vh 1vh 0vh'>
     
    La Villa Peripato è un parco pubblico situato nella città di Taranto, in Puglia. Il parco si trova sulle pendici della collina di Taranto, ed è stato inaugurato nel 1890. La Villa Peripato è uno dei parchi più antichi e suggestivi della città, ed è un luogo molto frequentato dai tarantini e dai turisti che visitano la città.
 
     La Villa Peripato si estende su una superficie di circa 5 ettari, ed è caratterizzata da una grande varietà di piante e alberi secolari, tra cui ulivi, lecci, cipressi e pini. Il parco ospita inoltre numerosi percorsi pedonali, fontane, laghetti artificiali e statue in marmo.">
-      <svg class="marker" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
+      <svg data-toggle="tooltip" title="Villa Peripato" class="marker right" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
       </svg>
     </div>
 
-
   </div>
+  
 
 
   <script>
@@ -247,6 +246,12 @@
       $("[data-toggle=popover]").popover('hide');
 
       });
+
+      $(".right").tooltip({
+      placement: 'right'
+      });
+
+
 
 
 

@@ -19,77 +19,59 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     
     <script type="text/javascript" src="js/generalJS.js"></script>
+    
+
+    
 
 
     <title>TaranTour</title>
     
     <style>
 
-    .card {
-        width: 70%;
-        position:fixed;
-        right: 12vh;
-        top: 17vh;
-        padding: 1%;
+   .card {
+        width: 100%;
+       top: 4vh;
+        left: 30vh;
+        padding: 0;
+        margin-bottom: 2.5vh;
         border: 2px solid darkgray;
         border-radius: 20px;
     }
     
-    p {
-    font-size: 2.5vh;
+    
+    .h3 {
+        font-size: 4vh;
+        font-weight: bolder;    
     font-family: 'Salsa';
-    color: #666666;
     }
+    
+    .card-img {
+        width: 70%;
+        margin: 3%;
+        border-radius: 20px;
+        
+    }
+    
+     .aiut{
+  width: 45%;
+background-color:white;
+
+  position:fixed;
+  z-index: 3;
+  right: 45vh;
+  top: 30vh;
+  padding: 1%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
     
 
 
-@keyframes shadow-pulse
-{
-  0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
-  }
-  100% {
-    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
-  }
-}
-
-@keyframes shadow-pulse-big
-{
-  0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.4);
-  }
-  100% {
-    box-shadow: 0 0 0 70px rgba(0, 0, 0, 0);
-  }
-}
-
-.example-1
-{position: fixed;
-    top: 35vh;
-    left: 60vh;
-  width: 3%;
-  color: #fff;
-  background: rgba(30, 144, 255, 0.8);
-  border-radius: 50%;
-  animation: shadow-pulse 1s infinite;
-}
-
-.example-1:hover {
-  animation: none;
-}
-
-.popover-title {
-    font-size: 2.5vh;
-    font-family: 'Salsa';
-    font-weight: bolder;
-}
-.popover-content {
-    font-size: 1.8vh;
-    font-family: 'Salsa';
-}
-
-.pop_1 {
-background-color: black;
+.help .tooltip-inner, .help .tooltip-arrow {
+  margin-right: 1.3vh;
 }
 
     </style>
@@ -131,17 +113,17 @@ background-color: black;
             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
         </svg>
         </div>
-        <div class="posAttuale" style="top:33.3vh; left: 54vh;">
-            <p style=" font-size: 2.5vh;font-weight: bold; position: relative; top: 6vh; left:4vh;color: #4a8fe7 ; ">Sei qui</p>
+        <div class="posAttuale" style="top:33.3vh; left: 116.1vh; width:17vh; height: 7.4vh;">
+            <p style=" font-size: 2.5vh;font-weight: bold; position: relative; top: 6.9vh; left:4vh;color: #4a8fe7 ; ">Sei qui</p>
         </div>
 
         <!-- Side Menu -->
     <div>
     <ul class="text-center">
-  			<li><a class="selected" href="Introduzione.html">Introduzione</a></li>
+  			<li><a href="Introduzione.html">Introduzione</a></li>
   			<li><a href="Storia.html">Storia</a></li>
   			<li><a href="Attrazioni.html">Attrazioni</a></li>
-  			<li><a href="Trad_Fest.html">Tradizioni e festività</a></li>
+  			<li><a class="selected" style="font-size:3.42vh" href="Trad_Fest.html">Tradizioni e festività</a></li>
   			<li><a href="Eventi.html">Eventi</a></li>
   			<li><a href="Chi_Siamo.html">Chi siamo?</a></li>
   			<li><a class="exit" >Esci</a></li>
@@ -150,70 +132,66 @@ background-color: black;
     
 
     <!-- INIZIO CONTENT -->
-    <div class="card">
     
-    <div class="example-1" id="poop" data-toggle="popover" title="Castello Aragonese" data-content="Uno dei maggiori punti di forza della città di Taranto e offre una splendida vista panoramica sulla città di Taranto e sul golfo, rendendolo una meta turistica molto popolare nella regione Puglia.">
-  
-    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
-    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+    <div class="container">
+    <div>
+        <div class=" aiut text-center"> 
+        <!--  <svg id="closeBtn_help" xmlns="http://www.w3.org/2000/svg" fill="red" width="40" height="40" class="bi bi-x-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>-->
+          <h3>Clicca su una delle tradizioni e festività presenti per visualizzare il contenuto</h3>
+          <input id="closeBtn_help" class="btn btn-secondary" type="button" value="Chiudi">
+        </div>
+    </div>
+
+    <div class="veloGrigio"></div>
+    <div class="help"> 
+    <svg xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" title="Aiuto" width="40" height="40" fill="currentColor" class="bi bi-question-square punt_interro" viewBox="0 0 16 16">
+      <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+      <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
     </svg>
+  </div>
+    
+    
+    
+    <!--
+    <div class="card">
+    <p> kitemmurt </p>
     </div>
     
-   <script>
-
-
+    <div class="card">
+    <p> dddd 2 </p>
+    </div>
+    -->
     
-    $(document).ready(function() {
-   $("[id=poop]").popover({
-      placement: 'right',
-
-   }).on("mouseenter", function () {
-        var _this = this;
-        $(this).popover("show");
-        $(".example-1").css("animation", "none"); 
-        $(this).siblings(".popover").on("mouseleave", function () {
-            $(_this).popover('hide');
-            $(".example-1").css("animation", "shadow-pulse 1s infinite");
-            
-        });
-    }).on("mouseleave", function () {
-        var _this = this;
-        setTimeout(function () {
-            if (!$(".popover:hover").length) {
-                $(_this).popover("hide");
-                $(".example-1").css("animation", "shadow-pulse 1s infinite");
-            }
-        }, 100);
-    });
-    $(".exit").click(function(){
-        if (confirm("Sei sicuro di voler uscire?")) {
-    window.open('', '_self', ''); window.close();
-  }
-
-    });
-
-    });
-
-
+    <div class="row">
+    <div class="col-md-5">
+      <button onclick="location.href='Sett_Santa.html';"  class="card tra_fe">
+        <div class="card-body text-center">
+          <h3 class="h3">I Riti della Settimana Santa</h3>
+          <img class="card-img" src="images/perd.jpeg" alt="perdoni">
+          </div>
+      </button>
+      
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Card 1</h5>
+          <p class="card-text">Contenuto della card 1</p>
+        </div>
+      </div>
+      
+    </div>
+    <div class="col-md-5">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Card 2</h5>
+          <p class="card-text">Contenuto della card 2</p>
+        </div>
+      </div>
+    </div>
+  </div>
     
-    
-    
-    </script>
-    
-    
-        
-        <p> <img src="images/cast_arag.png" style="width: 55%; float: left; padding-right: 1.5%;" alt="Immagine Castello Aragonese">
-        
-        Taranto è una città italiana situata nella regione Puglia, sulla costa del Mar Ionio. È la terza città più grande della Puglia dopo Bari e Lecce, con una popolazione di circa 200.000 abitanti. <br> <br>
-
-        Taranto è famosa per la sua storia antica e il suo porto naturale, che ha fatto della città un importante centro commerciale e marittimo sin dall'antichità. In epoca greca, Taranto era nota come Taras ed era una città molto importante della Magna Grecia, con una ricca cultura e un'economia fiorente. <br>
-
-        Oggi, Taranto è conosciuta anche per la sua industria pesante, in particolare l'industria siderurgica. La città è sede di importanti impianti industriali, tra cui il più grande stabilimento siderurgico d'Europa, ma negli ultimi anni si sta cercando di sviluppare anche il turismo, valorizzando le sue bellezze naturali e i suoi tesori artistici e culturali. <br><br>
-
-        Tra i principali luoghi di interesse di Taranto ci sono il Castello Aragonese, un'imponente fortezza risalente al XV secolo che domina la città, il Museo Archeologico Nazionale, che ospita importanti reperti della Magna Grecia e del periodo romano, e la Città Vecchia, un quartiere medievale con strette stradine e caratteristiche abitazioni in pietra. <br>
-
-        Inoltre, Taranto è circondata da splendide spiagge, alcune delle quali sono tra le più belle della Puglia, come ad esempio la Spiaggia di San Vito e la Spiaggia di Lido Gandoli. </p>
     </div>
 
  </body>

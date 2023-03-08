@@ -52,7 +52,7 @@ li a {
 
 
 li a:hover {
-  transform: translate(0vh, -0.4vh) scale(0.9,0.9);
+  transform:  scale(0.9,0.9);
   background-color:#91C2FFFF;
   color: white;
   text-decoration: none;

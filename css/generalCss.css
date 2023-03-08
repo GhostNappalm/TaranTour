@@ -23,10 +23,17 @@ img {
   user-select: none; /* Standard syntax */
 }
 
+p {
+    font-size: 2.5vh;
+    font-family: 'Salsa';
+    color: #666666;
+    }
+
 ul {
-  position: relative;
+  position: fixed;
 z-index: 1;
   list-style-type: none;
+  
   margin: 0;
   padding: 0;
   width: 20vh;
@@ -40,7 +47,7 @@ li a {
   font-size: 3.7vh;
   display: block;
   color: #000;
-  padding: 17.3%;
+  padding: 16.6%;
   border: 0.2vh solid black;
   background-color: #f7f7ffff;
   text-decoration: none;
@@ -195,6 +202,14 @@ svg {
   cursor: pointer;
 }
 
+.bi-arrow-left {
+transition: 0.5s;
+}
+
+.bi-arrow-left:hover {
+transform: translate(0vh, -0.4vh) scale(1.1,1.1);
+}
+
 .mappaApp{
   position: absolute;
   width: 110vh;
@@ -203,7 +218,6 @@ svg {
   left: 50vh;
   z-index: 3;
   border-radius: 10%;
-
   background: url("../images/mappaApp.jpg") no-repeat center center ;
   background-size: cover;
 
@@ -257,6 +271,15 @@ svg {
 .punt_interro:hover {
   fill:black;
   transform: translate(0vh, -0.4vh) scale(1.2,1.2);
+  cursor: pointer;
+}
+
+.tra_fe {
+transition: 0.5s;
+}
+
+.tra_fe:hover {
+  transform: translate(0vh, -0.4vh) scale(1.1,1.1);
   cursor: pointer;
 }
 

@@ -31,9 +31,7 @@ p {
 
 ul {
   position: fixed;
-z-index: 1;
-  list-style-type: none;
-  
+  z-index: 1;
   margin: 0;
   padding: 0;
   width: 20vh;
@@ -47,7 +45,7 @@ li a {
   font-size: 3.7vh;
   display: block;
   color: #000;
-  padding: 16.6%;
+  padding: 16.91%;
   border: 0.2vh solid black;
   background-color: #f7f7ffff;
   text-decoration: none;
@@ -84,8 +82,8 @@ li a:hover {
 }
 
 .lang {
-  position: absolute;
-  top:1.3vh;
+  position: fixed;
+  bottom:10vh;
   right:7vh;
   float:right;
   transition: 0.5s;
@@ -139,13 +137,12 @@ background-color: #F5F5F5;
 }
 
 .SfondoTitolo {
-position: absolute;
-margin: 0 ;
+position: relative;
 text-align: center;
 width: 44vh;
 height: 12vh;
-left: 80vh;
-top: 1vh;
+bottom: 0.7vh;
+margin: 0 auto;
 border-top-right-radius: 40%;
 border-top-left-radius: 40%;
 border-bottom-right-radius: 20%;
@@ -156,12 +153,15 @@ background: linear-gradient(360deg, #297AC5 0%, rgba(7, 114, 214, 0) 100%),
             linear-gradient(180deg, #FF0000 0%, #FF0000 0.01%, 
             rgba(255, 0, 0, 0.78) 69.27%, 
             rgba(255, 0, 0, 0) 100%);
+
+justify-content: middle;
+display: flex;
 }
 
 .Titolo{
   font-size: 9vh;
+  padding-left: 8%;
   font-family: 'Salsa';
-  margin-top:2vh;
 }
 
 .la{

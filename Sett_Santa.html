@@ -19,6 +19,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     
     <script type="text/javascript" src="js/generalJS.js"></script>
+    
+
+    
 
 
     <title>TaranTour</title>
@@ -26,71 +29,61 @@
     <style>
 
     .card {
-        width: 70%;
-        position:fixed;
-        right: 12vh;
-        top: 17vh;
+        position: fixed;
+        width: 73%;
+        top: 27.5vh;
+        left: 45vh;
         padding: 1%;
+        margin-bottom: 2vh;
         border: 2px solid darkgray;
         border-radius: 20px;
     }
     
-    p {
-    font-size: 2.5vh;
-    font-family: 'Salsa';
-    color: #666666;
+    .card-text {
+        position: fixed;
+        width: 73%;
+        bottom: 74vh;
+        left: 45vh;
+        padding: 1px;
+        border-radius: 20px;
     }
     
-
-
-@keyframes shadow-pulse
-{
-  0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
-  }
-  100% {
-    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
-  }
-}
-
-@keyframes shadow-pulse-big
-{
-  0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.4);
-  }
-  100% {
-    box-shadow: 0 0 0 70px rgba(0, 0, 0, 0);
-  }
-}
-
-.example-1
-{position: fixed;
-    top: 35vh;
-    left: 60vh;
-  width: 3%;
-  color: #fff;
-  background: rgba(30, 144, 255, 0.8);
-  border-radius: 50%;
-  animation: shadow-pulse 1s infinite;
-}
-
-.example-1:hover {
-  animation: none;
-}
-
-.popover-title {
-    font-size: 2.5vh;
+    
+    h2 {
+        font-size: 4.5vh;
+        font-weight: bolder;    
     font-family: 'Salsa';
-    font-weight: bolder;
-}
-.popover-content {
-    font-size: 1.8vh;
-    font-family: 'Salsa';
-}
+    }
+    
+    .card-img {
+        width: 70%;
+        margin: 3%;
+        border-radius: 20px;
+        
+    }
+    
+    img {
+        width: 35%;
+        border-radius: 10%;   
+    }
+    
+     .aiut{
+  width: 45%;
+background-color:white;
 
-.pop_1 {
-background-color: black;
+  position:fixed;
+  z-index: 3;
+  right: 45vh;
+  top: 30vh;
+  padding: 1%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+    
+
 
     </style>
     
@@ -131,89 +124,67 @@ background-color: black;
             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
         </svg>
         </div>
-        <div class="posAttuale" style="top:33.3vh; left: 54vh;">
-            <p style=" font-size: 2.5vh;font-weight: bold; position: relative; top: 6vh; left:4vh;color: #4a8fe7 ; ">Sei qui</p>
+        <div class="posAttuale" style="top:50.5vh; left: 116.1vh; width:17vh; height: 7.4vh;">
+            <p style=" font-size: 2.5vh;font-weight: bold; position: relative; top: 1.6vh; left:18.5vh;color: #4a8fe7 ; ">Sei qui</p>
         </div>
 
         <!-- Side Menu -->
-    <div>
+    <div >
     <ul class="text-center">
-  			<li><a class="selected" href="Introduzione.html">Introduzione</a></li>
+  			<li><a href="Introduzione.html">Introduzione</a></li>
   			<li><a href="Storia.html">Storia</a></li>
   			<li><a href="Attrazioni.html">Attrazioni</a></li>
-  			<li><a href="Trad_Fest.html">Tradizioni e festività</a></li>
+  			<li><a class="selected" style="font-size:3.42vh" href="Trad_Fest.html">Tradizioni e festività</a></li>
   			<li><a href="Eventi.html">Eventi</a></li>
   			<li><a href="Chi_Siamo.html">Chi siamo?</a></li>
-  			<li><a class="exit" href="TaranTour.html">Esci</a></li>
+  			<li><a class="exit" >Esci</a></li>
 	</ul>
     </div>
     
 
     <!-- INIZIO CONTENT -->
-    <div class="card">
     
-    <div class="example-1" id="poop" data-toggle="popover" title="Castello Aragonese" data-content="Uno dei maggiori punti di forza della città di Taranto e offre una splendida vista panoramica sulla città di Taranto e sul golfo, rendendolo una meta turistica molto popolare nella regione Puglia.">
-  
-    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
-    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-    </svg>
+    <div class="container">
+    
+    <div class="card-text"> 
+    
+    
+    <svg style= "float: left; margin-top: 2vh;" stroke="black" stroke-width="1" data-toggle="tooltip" title="Torna indietro" onclick="location.href='Trad_Fest.html';" xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+</svg>
+
+<script>
+ $('[class="bi bi-arrow-left"]').tooltip({
+      placement: 'top'
+    });
+</script>
+
+     <h2 class="text-center"> I Riti della Settimana Santa </h2>
     </div>
-    
-   <script>
-
-
-    
-    $(document).ready(function() {
-   $("[id=poop]").popover({
-      placement: 'right',
-
-   }).on("mouseenter", function () {
-        var _this = this;
-        $(this).popover("show");
-        $(".example-1").css("animation", "none"); 
-        $(this).siblings(".popover").on("mouseleave", function () {
-            $(_this).popover('hide');
-            $(".example-1").css("animation", "shadow-pulse 1s infinite");
-            
-        });
-    }).on("mouseleave", function () {
-        var _this = this;
-        setTimeout(function () {
-            if (!$(".popover:hover").length) {
-                $(_this).popover("hide");
-                $(".example-1").css("animation", "shadow-pulse 1s infinite");
-            }
-        }, 100);
-    });
-    $(".exit").click(function(){
-        if (confirm("Sei sicuro di voler uscire?")) {
-    window.open('', '_self', ''); window.close();
-  }
-
-    });
-
-    });
-
-
-    
-    
-    
-    </script>
-    
-    
+        <div class="card">
+        <p>
         
-        <p> <img src="images/cast_arag.png" style="width: 55%; float: left; padding-right: 1.5%;" alt="Immagine Castello Aragonese">
+        <img src="images/proc_1.jpeg" style="float: right; margin-left: 1.5%; margin-bottom: 0.5%;" alt="Immagine Processione Misteri">
+        La Settimana Santa a Taranto è una delle tradizioni religiose più importanti della città, che richiama migliaia di visitatori ogni anno.
+
+La Settimana Santa a Taranto inizia con la Domenica delle Palme, quando le strade della città sono adornate di rami di palma e i fedeli portano in processione le loro palme. La processione più importante avviene alla sera, quando la statua del Cristo Risorto viene portata in processione dal Santuario della Madonna della Salute al Duomo di Taranto.
+
+La processione dei Misteri inizia il Giovedì Santo, quando le statue dei Misteri vengono portate in processione dalle diverse confraternite della città. Queste statue rappresentano la Passione di Cristo e sono considerate tra le più belle d'Italia.
+
+<img src="images/madonna.jpeg" style="float: left; margin-right: 1.5%; margin-top: 1%;" alt="Immagine Processione Misteri">
+Il Venerdì Santo è il giorno della Via Crucis, che viene celebrata lungo le strade della città. La sera, le statue dei Misteri vengono portate in processione dalla Chiesa di San Domenico al Duomo di Taranto.
+
+Il Sabato Santo è il giorno della veglia pasquale, quando la chiesa celebra la Resurrezione di Cristo.
+
+La Settimana Santa a Taranto è un evento emozionante e intenso, con una forte partecipazione della comunità locale. I visitatori possono ammirare le belle statue dei Misteri, partecipare alle processioni e vivere l'atmosfera unica di questa antica tradizione religiosa.
+
+
+
+
+        </p>
         
-        Taranto è una città italiana situata nella regione Puglia, sulla costa del Mar Ionio. È la terza città più grande della Puglia dopo Bari e Lecce, con una popolazione di circa 200.000 abitanti. <br> <br>
-
-        Taranto è famosa per la sua storia antica e il suo porto naturale, che ha fatto della città un importante centro commerciale e marittimo sin dall'antichità. In epoca greca, Taranto era nota come Taras ed era una città molto importante della Magna Grecia, con una ricca cultura e un'economia fiorente. <br>
-
-        Oggi, Taranto è conosciuta anche per la sua industria pesante, in particolare l'industria siderurgica. La città è sede di importanti impianti industriali, tra cui il più grande stabilimento siderurgico d'Europa, ma negli ultimi anni si sta cercando di sviluppare anche il turismo, valorizzando le sue bellezze naturali e i suoi tesori artistici e culturali. <br><br>
-
-        Tra i principali luoghi di interesse di Taranto ci sono il Castello Aragonese, un'imponente fortezza risalente al XV secolo che domina la città, il Museo Archeologico Nazionale, che ospita importanti reperti della Magna Grecia e del periodo romano, e la Città Vecchia, un quartiere medievale con strette stradine e caratteristiche abitazioni in pietra. <br>
-
-        Inoltre, Taranto è circondata da splendide spiagge, alcune delle quali sono tra le più belle della Puglia, come ad esempio la Spiaggia di San Vito e la Spiaggia di Lido Gandoli. </p>
+        </div>
+        
     </div>
 
  </body>

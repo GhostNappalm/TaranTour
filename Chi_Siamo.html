@@ -21,79 +21,56 @@
     <script type="text/javascript" src="js/generalJS.js"></script>
 
 
-    <title>TaranTour</title>
-    
-    <style>
+    <title>Chi siamo</title>
 
-    .card {
-        width: 70%;
-        position:fixed;
-        right: 12vh;
-        top: 17vh;
-        padding: 1%;
-        border: 2px solid darkgray;
-        border-radius: 20px;
-    }
-    
-    p {
-    font-size: 2.5vh;
-    font-family: 'Salsa';
-    color: #666666;
-    }
-    
+    <style type="text/css">
+      
+       .sez{
+        position: relative;
+        background-color:#f7f7ffff ;
+        overflow:hidden;
+        margin-left:3vh ;
+        padding: 0vh 1vh 1vh 1vh;
+        border-style: solid;
+        border-width: 0.7vh;
+        border-radius: 6%;
+        border-color: #102b3f;
+        left:40vh;
+        top: 10vh;
+        width: 35vh;
+        height: 40vh;
+        display: inline-flex;
+        align-items: center;
+        transition: 1s;
+       }
 
+       .sez:hover{
+        height: 53vh;
+       }
 
-@keyframes shadow-pulse
-{
-  0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
-  }
-  100% {
-    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
-  }
-}
+       .profileIcon{
+        position: relative;
+        width: 30vh;
+        height: 30vh;
+        margin: 1vh;
+       }
 
-@keyframes shadow-pulse-big
-{
-  0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.4);
-  }
-  100% {
-    box-shadow: 0 0 0 70px rgba(0, 0, 0, 0);
-  }
-}
+       .profileName{
+        font-size: 3vh;
+        font-weight: bold;
+        font-family: Open Sans;
+       }
 
-.example-1
-{position: fixed;
-    top: 35vh;
-    left: 60vh;
-  width: 3%;
-  color: #fff;
-  background: rgba(30, 144, 255, 0.8);
-  border-radius: 50%;
-  animation: shadow-pulse 1s infinite;
-}
-
-.example-1:hover {
-  animation: none;
-}
-
-.popover-title {
-    font-size: 2.5vh;
-    font-family: 'Salsa';
-    font-weight: bolder;
-}
-.popover-content {
-    font-size: 1.8vh;
-    font-family: 'Salsa';
-}
-
-.pop_1 {
-background-color: black;
-}
+       .profileInfo{
+        position: relative;
+        top:2vh;
+        font-size: 2.5vh;
+        font-family: Open Sans;
+       }
 
     </style>
-    
+
+
   </head>
   <body>
     <header>
@@ -102,11 +79,11 @@ background-color: black;
       
 
       <div class="SfondoTitolo">
-    	<h1 class="Titolo"> TaranTour </h1>
+      <h1 class="Titolo"> TaranTour </h1>
       </div>
 
 
-    <div class="lang dropdown" data-toggle="tooltip" title="Lingua">
+      <div class="lang dropdown" data-toggle="tooltip" title="Lingua">
 
       <div class="la" type="button" data-toggle="dropdown"> 
         <img class="imag" src="images\ita.png"> <label class="cool">  Italiano </label> <span class="caret cool"></span>
@@ -118,7 +95,7 @@ background-color: black;
         <li class="text-center lig"> <img class="imag" src="images\spa.png"> <label style="cursor:pointer"> Spanish </label> </li>
         <li class="text-center lig"> <img class="imag" src="images\det.png"> <label style="cursor:pointer"> German </label> </li>
       </ul>
-    </div>
+      </div>
 
     <svg class="mappaAppIcon" data-toggle="tooltip" title="Mappa dell'applicazione" fill="#102b3f" height="10vh" width="10vh" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#102b3f"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M256.001,101.02c-39.388,0-71.432,32.045-71.432,71.432c0,39.388,32.045,71.432,71.432,71.432 c39.388,0,71.432-32.045,71.432-71.432C327.433,133.065,295.389,101.02,256.001,101.02z M256,213.445 c-22.603,0-40.993-18.389-40.993-40.993s18.389-40.993,40.993-40.993s40.993,18.39,40.993,40.993 C296.993,195.056,278.603,213.445,256,213.445z"></path> </g> </g> <g> <g> <path d="M403.703,302.096h-63.715c28.369-43.321,43.249-87.709,43.249-129.644c0-70.159-57.079-127.238-127.238-127.238 s-127.238,57.079-127.238,127.238c0,41.935,14.881,86.323,43.249,129.644h-63.715L0,466.786h512L403.703,302.096z M159.202,172.453c-0.001-53.377,43.423-96.8,96.798-96.8s96.799,43.424,96.799,96.799c0,53.343-28.498,101.699-52.407,132.872 c-0.767,0.999-1.533,1.977-2.3,2.955c-0.781,0.997-1.563,1.981-2.344,2.956c-0.249,0.31-0.498,0.623-0.747,0.931 c-0.777,0.963-1.552,1.914-2.327,2.854c-0.249,0.301-0.497,0.604-0.745,0.903c-0.774,0.935-1.546,1.857-2.315,2.767 c-0.242,0.287-0.485,0.573-0.727,0.858c-0.774,0.911-1.545,1.81-2.313,2.696c-0.229,0.265-0.458,0.528-0.686,0.79 c-0.775,0.889-1.545,1.766-2.311,2.63c-0.216,0.244-0.431,0.485-0.646,0.727c-0.777,0.871-1.549,1.731-2.315,2.574 c-0.19,0.209-0.378,0.415-0.567,0.622c-0.783,0.859-1.563,1.708-2.333,2.537c-0.162,0.174-0.324,0.347-0.485,0.521 c-0.791,0.85-1.578,1.687-2.353,2.505c-0.123,0.129-0.244,0.256-0.365,0.383c-0.808,0.849-1.607,1.684-2.394,2.497 c-0.074,0.077-0.147,0.151-0.222,0.228c-0.827,0.853-1.645,1.69-2.445,2.502c-0.018,0.018-0.036,0.036-0.053,0.054 c-5.135,5.2-9.71,9.54-13.394,12.908C229.93,329.862,159.202,257.301,159.202,172.453z M124.712,332.535h69.609 c22.376,27.534,43.37,45.907,50.029,51.489c0.002,0.002,0.004,0.003,0.006,0.005c0.241,0.202,0.465,0.389,0.668,0.557 c0.014,0.011,0.025,0.021,0.04,0.032c0.396,0.328,0.721,0.596,0.96,0.789c0.019,0.016,0.03,0.025,0.05,0.041 c0.191,0.155,0.329,0.266,0.4,0.323c0.007,0.006,0.024,0.019,0.03,0.024l0.002,0.001h0.001l0.01,0.008l9.486,7.575l9.486-7.575 l0.01-0.008h0.001l0.002-0.001c0.006-0.005,0.022-0.018,0.03-0.024c0.071-0.057,0.209-0.167,0.4-0.323 c0.018-0.015,0.029-0.024,0.05-0.041c0.238-0.194,0.564-0.462,0.96-0.789c0.014-0.011,0.025-0.021,0.04-0.032 c0.203-0.168,0.426-0.355,0.668-0.557c0.002-0.001,0.004-0.003,0.006-0.005c6.66-5.583,27.653-23.955,50.029-51.489h69.609 l68.264,103.811H56.448L124.712,332.535z"></path> </g> </g> </g></svg>
   
@@ -138,83 +115,41 @@ background-color: black;
         <!-- Side Menu -->
     <div>
     <ul class="text-center">
-  			<li><a class="selected" href="Introduzione.html">Introduzione</a></li>
-  			<li><a href="Storia.html">Storia</a></li>
-  			<li><a href="Attrazioni.html">Attrazioni</a></li>
-  			<li><a href="Trad_Fest.html">Tradizioni e festività</a></li>
-  			<li><a href="Eventi.html">Eventi</a></li>
-  			<li><a href="Chi_Siamo.html">Chi siamo?</a></li>
-  			<li><a class="exit" href="TaranTour.html">Esci</a></li>
-	</ul>
-    </div>
-    
-
-    <!-- INIZIO CONTENT -->
-    <div class="card">
-    
-    <div class="example-1" id="poop" data-toggle="popover" title="Castello Aragonese" data-content="Uno dei maggiori punti di forza della città di Taranto e offre una splendida vista panoramica sulla città di Taranto e sul golfo, rendendolo una meta turistica molto popolare nella regione Puglia.">
-  
-    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
-    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-    </svg>
-    </div>
-    
-   <script>
-
-
-    
-    $(document).ready(function() {
-   $("[id=poop]").popover({
-      placement: 'right',
-
-   }).on("mouseenter", function () {
-        var _this = this;
-        $(this).popover("show");
-        $(".example-1").css("animation", "none"); 
-        $(this).siblings(".popover").on("mouseleave", function () {
-            $(_this).popover('hide');
-            $(".example-1").css("animation", "shadow-pulse 1s infinite");
-            
-        });
-    }).on("mouseleave", function () {
-        var _this = this;
-        setTimeout(function () {
-            if (!$(".popover:hover").length) {
-                $(_this).popover("hide");
-                $(".example-1").css("animation", "shadow-pulse 1s infinite");
-            }
-        }, 100);
-    });
-    $(".exit").click(function(){
-        if (confirm("Sei sicuro di voler uscire?")) {
-    window.open('', '_self', ''); window.close();
-  }
-
-    });
-
-    });
-
-
-    
-    
-    
-    </script>
-    
-    
-        
-        <p> <img src="images/cast_arag.png" style="width: 55%; float: left; padding-right: 1.5%;" alt="Immagine Castello Aragonese">
-        
-        Taranto è una città italiana situata nella regione Puglia, sulla costa del Mar Ionio. È la terza città più grande della Puglia dopo Bari e Lecce, con una popolazione di circa 200.000 abitanti. <br> <br>
-
-        Taranto è famosa per la sua storia antica e il suo porto naturale, che ha fatto della città un importante centro commerciale e marittimo sin dall'antichità. In epoca greca, Taranto era nota come Taras ed era una città molto importante della Magna Grecia, con una ricca cultura e un'economia fiorente. <br>
-
-        Oggi, Taranto è conosciuta anche per la sua industria pesante, in particolare l'industria siderurgica. La città è sede di importanti impianti industriali, tra cui il più grande stabilimento siderurgico d'Europa, ma negli ultimi anni si sta cercando di sviluppare anche il turismo, valorizzando le sue bellezze naturali e i suoi tesori artistici e culturali. <br><br>
-
-        Tra i principali luoghi di interesse di Taranto ci sono il Castello Aragonese, un'imponente fortezza risalente al XV secolo che domina la città, il Museo Archeologico Nazionale, che ospita importanti reperti della Magna Grecia e del periodo romano, e la Città Vecchia, un quartiere medievale con strette stradine e caratteristiche abitazioni in pietra. <br>
-
-        Inoltre, Taranto è circondata da splendide spiagge, alcune delle quali sono tra le più belle della Puglia, come ad esempio la Spiaggia di San Vito e la Spiaggia di Lido Gandoli. </p>
+        <li><a class="selected" href="Introduzione.html">Introduzione</a></li>
+        <li><a href="Storia.html">Storia</a></li>
+        <li><a href="Attrazioni.html">Attrazioni</a></li>
+        <li><a href="Trad_Fest.html">Tradizioni e festività</a></li>
+        <li><a href="Eventi.html">Eventi</a></li>
+        <li><a href="Chi_Siamo.html">Chi siamo?</a></li>
+        <li><a class="exit" href="TaranTour.html">Esci</a></li>
+    </ul>
     </div>
 
- </body>
- </html>
+        <!-- INIZIO CONTENT -->
+
+        <div class="card sez">
+          <img class="profileIcon" src="https://pixlok.com/wp-content/uploads/2022/02/Profile-Icon-SVG-09856789.png">
+          <div class="profileName">Matteo Baso</div>
+          <div class="profileInfo">Ruolo: Programmatore<br>Matricola: 736660 <br>Email: basomatteo@gmail.com</div>
+        </div>
+
+        <div class="card sez">
+          <img class="profileIcon" src="https://pixlok.com/wp-content/uploads/2022/02/Profile-Icon-SVG-09856789.png">
+          <div class="profileName">Matteo Baso</div>
+          <div class="profileInfo">Ruolo: Programmatore<br>Matricola: 736660 <br>Email: basomatteo@gmail.com</div>
+        </div>
+          
+        <div class="card sez">
+          <img class="profileIcon" src="https://pixlok.com/wp-content/uploads/2022/02/Profile-Icon-SVG-09856789.png">
+          <div class="profileName">Matteo Baso</div>
+          <div class="profileInfo">Ruolo: Programmatore<br>Matricola: 736660 <br>Email: basomatteo@gmail.com</div>
+        </div>
+
+        <div class="card sez">
+          <img class="profileIcon" src="https://pixlok.com/wp-content/uploads/2022/02/Profile-Icon-SVG-09856789.png">
+          <div class="profileName">Matteo Baso</div>
+          <div class="profileInfo">Ruolo: Programmatore<br>Matricola: 736660 <br>Email: basomatteo@gmail.com</div>
+        </div>
+  </body>
+</html>
+    

@@ -5,7 +5,7 @@ $(document).ready(function(){
       placement: 'left'
     });
     //
-    
+
 
 
     //Js per la Mappa applicazione
@@ -48,4 +48,8 @@ $(document).ready(function(){
 
     //
 
+
+    //Js per tasto esci
+    
+    //
 });

@@ -2,19 +2,23 @@
 <html>
      <head>
     	<meta charset="UTF-8">
-
+	<title>TaranTour</title>
     	<!-- CSS -->
     	<link rel="stylesheet" href="css\generalCss.css">
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     	<!-- JS -->
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+
+
+    
 
     	<style type="text/css">
     		body {
 				margin: 0;
 				overflow: hidden;
+				align-items: center;
 			}
 
     		.sfondo{
@@ -35,13 +39,40 @@
     			user-select : none;
     			background-color: transparent;
     			font-size: 10vh;
-    			z-index: 2;
+    			z-index: 3;
     		}
 
     		.Logo{
     			mix-blend-mode: difference ;
     			top:1vh;
     		}
+
+    		.LogoUni{
+    			position: absolute;
+    			width: 19vh;
+    			top:1vh;
+    			right: 2vh;h;
+    			mix-blend-mode: color-burn  ;
+    			user-select: none;
+    			z-index: 3;
+
+    			
+    		}
+
+    		.SfondoTitolo{
+    			top:1.2vh;
+    		}
+
+    		.ind{
+    			position: relative;
+    			font-size: 3vh;
+    			font-weight: bold;
+    			left:83vh;
+    			top:70vh;
+    			z-index: 1;
+    			color:white;
+    		}
+
 
     	</style>
 
@@ -55,7 +86,15 @@
       <div class="SfondoTitolo">
       <h1 class="Titolo" style="color:white"> TaranTour </h1>
       </div>
+
+      <img class="LogoUni" src="images\logo_uni.jpg">
+ 	 
+
+      <div class="ind">Clicca per continuare</div>
+
 	</body>
+
+	
 	
 
 </html>

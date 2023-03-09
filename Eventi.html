@@ -21,85 +21,57 @@
     
     <script type="text/javascript" src="js/generalJS.js"></script>
 
-
-
-    <style type="text/css">
-      /*
-       .sez{
-        
-        background-color:#f7f7ffff ;
-        overflow:hidden;
-        margin-left:1vh;
-        padding: 0vh 1vh 1vh 1vh;
-        border-style: solid;
-        border-width: 0.4vh;
-        border-radius: 6%;
-        border-color: #102b3f;
-        left:40vh;
-        top: 18vh;
-        width: 35vh;
-        height: 40vh;
-        display: inline-flex;
-        align-items: center;
-        transition: 0.5s;
-       }*/
-
-       .sez{
-        background-color:#f7f7ffff ;
-        overflow:hidden;
-        padding: 0vh 1vh 1vh 1vh;
-        border-style: solid;
-        border-width: 0.4vh;
-        border-radius: 6%;
-        border-color: #102b3f;
-        left:53.5vh;
-        top: 15vh;
-        width: 75%;
-        height: 325px;
-        align-items: center;
-        transition: 0.2s;
-       }
-
-       .col-md-3 {
-        margin-left: -6%;
-       }
-
-
-       .sez:hover{
-        height: 47vh;
-       }
-
-       .profileIcon{
-        width: 80%;
-        margin: 2%;
-       }
-
-       .profileName{
-        font-size: 3vh;
-        font-weight: bold;
-        font-family: 'Salsa';
-       }
-
-       .profileInfo{
+    <style>
+      * {
+        box-sizing: border-box}
+      .slide1, .slide2 {
+        display: none}
+      img {
+        vertical-align: middle;
+      }
+      .carosello {
+        left:45vh;
+        width: 70%;
         position: relative;
-        top:3vh;
-        font-size: 2.5vh;
-        font-family: 'Salsa';
-       }
-
-
-       .team {
-        width: 73%;
+        top:5vh;
+        border: 0.5vh solid grey;
+        border-radius: 2%;
+        padding: 3vh;
+      }
+      .prec, .succ {
+        cursor: pointer;
+        user-select:none;
+        position: absolute;
+        margin: 1vh;
+        top: 50%;
+        width: 5vh;
+        height:5vh;
+        border:0.4vh solid #DDDDDD;
+        color: rgb(45,45,45);
+        font-size: 4vh;
+        transition: 0.5s ease;
+        border-radius:50%;
         text-align: center;
-        font-family: 'Salsa';
-        top: 6vh;
-        left: 45vh;
-        border: transparent;
-       }
+        text-decoration: none !important;
+        line-height: 4.5vh;
+      }
+      .prec {
+        left: 0vh;
+      }
+
+       .succ {
+        right: 0;
+      }
+      .prec:hover, .succ:hover {
+        background-color: #DDDDDD;
+        color: black;
+      }
+
+      .desc{
+        font-size: 2vh;
+      }
 
     </style>
-
-
   </head>
   <body>
     <header>
@@ -111,8 +83,7 @@
       <h1 class="Titolo"> TaranTour </h1>
       </div>
 
-
-      <div class="lang dropdown" data-toggle="tooltip" title="Lingua">
+    <div class="lang dropdown" data-toggle="tooltip" title="Lingua">
 
       <div class="la" type="button" data-toggle="dropdown"> 
         <img class="imag" src="images\ita.png"> <label class="cool">  Italiano </label> <span class="caret cool"></span>
@@ -124,100 +95,99 @@
         <li class="text-center lig"> <img class="imag" src="images\spa.png"> <label style="cursor:pointer"> Spanish </label> </li>
         <li class="text-center lig"> <img class="imag" src="images\det.png"> <label style="cursor:pointer"> German </label> </li>
       </ul>
-      </div>
+    </div>
+
+
 
     <svg class="mappaAppIcon" data-toggle="tooltip" title="Mappa dell'applicazione" fill="#102b3f" height="10vh" width="10vh" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#102b3f"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M256.001,101.02c-39.388,0-71.432,32.045-71.432,71.432c0,39.388,32.045,71.432,71.432,71.432 c39.388,0,71.432-32.045,71.432-71.432C327.433,133.065,295.389,101.02,256.001,101.02z M256,213.445 c-22.603,0-40.993-18.389-40.993-40.993s18.389-40.993,40.993-40.993s40.993,18.39,40.993,40.993 C296.993,195.056,278.603,213.445,256,213.445z"></path> </g> </g> <g> <g> <path d="M403.703,302.096h-63.715c28.369-43.321,43.249-87.709,43.249-129.644c0-70.159-57.079-127.238-127.238-127.238 s-127.238,57.079-127.238,127.238c0,41.935,14.881,86.323,43.249,129.644h-63.715L0,466.786h512L403.703,302.096z M159.202,172.453c-0.001-53.377,43.423-96.8,96.798-96.8s96.799,43.424,96.799,96.799c0,53.343-28.498,101.699-52.407,132.872 c-0.767,0.999-1.533,1.977-2.3,2.955c-0.781,0.997-1.563,1.981-2.344,2.956c-0.249,0.31-0.498,0.623-0.747,0.931 c-0.777,0.963-1.552,1.914-2.327,2.854c-0.249,0.301-0.497,0.604-0.745,0.903c-0.774,0.935-1.546,1.857-2.315,2.767 c-0.242,0.287-0.485,0.573-0.727,0.858c-0.774,0.911-1.545,1.81-2.313,2.696c-0.229,0.265-0.458,0.528-0.686,0.79 c-0.775,0.889-1.545,1.766-2.311,2.63c-0.216,0.244-0.431,0.485-0.646,0.727c-0.777,0.871-1.549,1.731-2.315,2.574 c-0.19,0.209-0.378,0.415-0.567,0.622c-0.783,0.859-1.563,1.708-2.333,2.537c-0.162,0.174-0.324,0.347-0.485,0.521 c-0.791,0.85-1.578,1.687-2.353,2.505c-0.123,0.129-0.244,0.256-0.365,0.383c-0.808,0.849-1.607,1.684-2.394,2.497 c-0.074,0.077-0.147,0.151-0.222,0.228c-0.827,0.853-1.645,1.69-2.445,2.502c-0.018,0.018-0.036,0.036-0.053,0.054 c-5.135,5.2-9.71,9.54-13.394,12.908C229.93,329.862,159.202,257.301,159.202,172.453z M124.712,332.535h69.609 c22.376,27.534,43.37,45.907,50.029,51.489c0.002,0.002,0.004,0.003,0.006,0.005c0.241,0.202,0.465,0.389,0.668,0.557 c0.014,0.011,0.025,0.021,0.04,0.032c0.396,0.328,0.721,0.596,0.96,0.789c0.019,0.016,0.03,0.025,0.05,0.041 c0.191,0.155,0.329,0.266,0.4,0.323c0.007,0.006,0.024,0.019,0.03,0.024l0.002,0.001h0.001l0.01,0.008l9.486,7.575l9.486-7.575 l0.01-0.008h0.001l0.002-0.001c0.006-0.005,0.022-0.018,0.03-0.024c0.071-0.057,0.209-0.167,0.4-0.323 c0.018-0.015,0.029-0.024,0.05-0.041c0.238-0.194,0.564-0.462,0.96-0.789c0.014-0.011,0.025-0.021,0.04-0.032 c0.203-0.168,0.426-0.355,0.668-0.557c0.002-0.001,0.004-0.003,0.006-0.005c6.66-5.583,27.653-23.955,50.029-51.489h69.609 l68.264,103.811H56.448L124.712,332.535z"></path> </g> </g> </g></svg>
+
+
   
-    </header>
+  </header>
+
         <!-- Mappa APP -->
         <div class="veloGrigio"> </div>
-        <div class="mappaApp">
+        <div class="mappaApp">  
         <svg id="closeBtn" xmlns="http://www.w3.org/2000/svg" fill="red"  class="bi bi-x-circle" viewBox="0 0 16 16">
             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
         </svg>
         </div>
-        <div class="posAttuale" style="top:33.3vh; left: 54vh;">
+        <div class="posAttuale" style="top:33.3vh; left: 93vh;">
             <p style=" font-size: 2.5vh;font-weight: bold; position: relative; top: 6vh; left:4vh;color: #4a8fe7 ; ">Sei qui</p>
         </div>
 
         <!-- Side Menu -->
-    <div>
     <ul class="text-center">
         <li><a href="Introduzione.html">Introduzione</a></li>
         <li><a href="Storia.html">Storia</a></li>
         <li><a href="Attrazioni.html">Attrazioni</a></li>
         <li><a href="Trad_Fest.html">Tradizioni e festività</a></li>
-        <li><a href="Eventi.html">Eventi</a></li>
-        <li><a class="selected" href="Chi_Siamo.html">Chi siamo?</a></li>
+        <li><a class="selected" href="Eventi.html">Eventi</a></li>
+        <li><a href="Chi_Siamo.html">Chi siamo?</a></li>
         <li><a class="exit" href="TaranTour.html">Esci</a></li>
     </ul>
+  <!-- INIZIO CONTENT -->
+
+    <div class="carosello" style="display: none;">
+      <div class="slide1">
+        <img src="IMMAGINE1.JPG" style="max:100%">
+      </div>
+      <div class="slide1">
+        <img src="IMMAGINE2.JPG" style="width:100%">
+      </div>
+      <div class="slide1">
+        <img src="IMMAGINE3.JPG" style="width:100%">
+      </div>
+      <a class="prec" onclick="cambiaSlide(-1, 0)">&#10094;
+      </a>
+      <a class="succ" onclick="cambiaSlide(1, 0)">&#10095;
+      </a>
     </div>
 
-        <!-- INIZIO CONTENT -->
-        <div class="card team">
-          <h2 style="font-size: 450%;"> Il nostro Team</h2>
-          </div>
-
-          <div class="col-md-3">
-            <div class="card sez">
-              <img class="profileIcon" src="https://pixlok.com/wp-content/uploads/2022/02/Profile-Icon-SVG-09856789.png">
-              <div class="profileName">Matteo Baso</div>
-              <div class="profileInfo">Ruolo: Programmatore<br>Matricola: 736660 <br>Email: basomatteo@gmail.com</div>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="card sez">
-              <img class="profileIcon" src="https://pixlok.com/wp-content/uploads/2022/02/Profile-Icon-SVG-09856789.png">
-              <div class="profileName">Matteo Baso</div>
-              <div class="profileInfo">Ruolo: Programmatore<br>Matricola: 736660 <br>Email: basomatteo@gmail.com</div>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="card sez">
-              <img class="profileIcon" src="https://pixlok.com/wp-content/uploads/2022/02/Profile-Icon-SVG-09856789.png">
-              <div class="profileName">Matteo Baso</div>
-              <div class="profileInfo">Ruolo: Programmatore<br>Matricola: 736660 <br>Email: basomatteo@gmail.com</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="card sez">
-              <img class="profileIcon" src="https://pixlok.com/wp-content/uploads/2022/02/Profile-Icon-SVG-09856789.png">
-              <div class="profileName">Matteo Baso</div>
-              <div class="profileInfo">Ruolo: Programmatore<br>Matricola: 736660 <br>Email: basomatteo@gmail.com</div>
-            </div>
-          </div>
-
-       
-
-       <!-- 
-        <div class="card sez">
-          <img class="profileIcon" src="https://pixlok.com/wp-content/uploads/2022/02/Profile-Icon-SVG-09856789.png">
-          <div class="profileName">Matteo Baso</div>
-          <div class="profileInfo">Ruolo: Programmatore<br>Matricola: 736660 <br>Email: basomatteo@gmail.com</div>
-        </div>
-
-        <div class="card sez">
-          <img class="profileIcon" src="https://pixlok.com/wp-content/uploads/2022/02/Profile-Icon-SVG-09856789.png">
-          <div class="profileName">Matteo Baso</div>
-          <div class="profileInfo">Ruolo: Programmatore<br>Matricola: 736660 <br>Email: basomatteo@gmail.com</div>
-        </div>
-          
-        <div class="card sez">
-          <img class="profileIcon" src="https://pixlok.com/wp-content/uploads/2022/02/Profile-Icon-SVG-09856789.png">
-          <div class="profileName">Matteo Baso</div>
-          <div class="profileInfo">Ruolo: Programmatore<br>Matricola: 736660 <br>Email: basomatteo@gmail.com</div>
-        </div>
-
-        <div class="card sez">
-          <img class="profileIcon" src="https://pixlok.com/wp-content/uploads/2022/02/Profile-Icon-SVG-09856789.png">
-          <div class="profileName">Matteo Baso</div>
-          <div class="profileInfo">Ruolo: Programmatore<br>Matricola: 736660 <br>Email: basomatteo@gmail.com</div>
-        </div> -->
+    </p>
+    <div class="carosello">
+      <div class="slide2">
+        <img src="images/villa_peripato.webp" style="width:100vh; height: 60vh;">
+        <div class="desc"> Questo evento ha origine enl 453452345 dwqd wd qwdqw dqd dq dwdd wdwd qdwdwdq dwqdwdq derferf qwdefregtr hfgreg ergre gregerg ergr g ergregreg erg ergrgg eg rgeg rgeg gergreg eg ege g egr gregreg eg erg rg eg e gegeg geg</div>
+      </div>
+      <div class="slide2">
+        <img src="images/monumento_marinai.jpg" style="width:100vh; height: 60vh;">
+        <div class="desc"> Questo evento ha origine enl 213123 dwqd wd qwdqw dqd dq dwdd wdwd qdwdwdq dwqdwdq derferf qwdefregtr hfgreg ergre gregerg ergr g ergregreg erg ergrgg eg rgeg rgeg gergreg eg ege g egr gregreg eg erg rg eg e gegeg geg</div>
+      </div>
+      <div class="slide2">
+        <img src="images/palazzo_governo.jpg" style="width:100vh; height: 60vh;">
+        <div class="desc"> Questo evento ha origine enl 87456733 dwqd wd qwdqw dqd dq dwdd wdwd qdwdwdq dwqdwdq derferf qwdefregtr hfgreg ergre gregerg ergr g ergregreg erg ergrgg eg rgeg rgeg gergreg eg ege g egr gregreg eg erg rg eg e gegeg geg</div>
+      </div>
+      <a class="prec" onclick="cambiaSlide(-1, 1)">&#10094;
+      </a>
+      <a class="succ" onclick="cambiaSlide(1, 1)">&#10095;
+      </a>
+    </div>
+    <script>
+      var slideTab = [1,1];
+      var slideId = []
+      var slides = document.getElementsByClassName("carosello");
+      for (var e = 1; e <= slides.length; e++){
+        slideId.push("slide"+e);
+      }
+      creaSlide(1, 0);
+      creaSlide(1, 1);
+      function cambiaSlide(n, no) {
+        creaSlide(slideTab[no] += n, no);
+      }
+      function creaSlide(n, no) {
+        var i;
+        var x = document.getElementsByClassName(slideId[no]);
+        if (n > x.length) {
+          slideTab[no] = 1}
+        if (n < 1) {
+          slideTab[no] = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideTab[no]-1].style.display = "block";
+      }
+    </script>
   </body>
 </html>
-    

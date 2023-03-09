@@ -5,6 +5,7 @@ body {
  margin: 0;
  width: 100%;
  overflow: hidden;
+ user-scalable=no;
 }
 
 header {
@@ -163,7 +164,7 @@ display: flex;
 
 .Titolo{
   font-size: 9vh;
-  padding-left: 8%;
+  margin: 1vh 1vh 3vh 3vh;
   font-family: 'Salsa';
 }
 

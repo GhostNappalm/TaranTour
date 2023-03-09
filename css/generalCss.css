@@ -1,3 +1,5 @@
+
+
 body {
  font-family: Open Sans;
  margin: 0;
@@ -276,11 +278,11 @@ transform: translate(0vh, -0.4vh) scale(1.1,1.1);
 }
 
 .tra_fe {
-transition: 0.5s;
+transition: 0.3s;
 }
 
 .tra_fe:hover {
-  transform: translate(0vh, -0.4vh) scale(1.1,1.1);
+  transform: translate(0vh, -0.4vh) scale(1.05,1.05);
   cursor: pointer;
 }
 

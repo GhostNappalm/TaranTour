@@ -1,11 +1,8 @@
-
-
 body {
  font-family: Open Sans;
  margin: 0;
  width: 100%;
  overflow: hidden;
- user-scalable=no;
 }
 
 header {
@@ -279,11 +276,11 @@ transform: translate(0vh, -0.4vh) scale(1.1,1.1);
 }
 
 .tra_fe {
-transition: 0.3s;
+transition: 0.5s;
 }
 
 .tra_fe:hover {
-  transform: translate(0vh, -0.4vh) scale(1.05,1.05);
+  transform: translate(0vh, -0.4vh) scale(1.1,1.1);
   cursor: pointer;
 }
 

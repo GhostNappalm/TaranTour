@@ -37,7 +37,7 @@ function stor(){
                 break;
             case "8": 
                 $('section').hide();
-                $('section').eq(6).fadeIn(300);
+                $('section').eq(7).fadeIn(300);
                 break;
         }   
 

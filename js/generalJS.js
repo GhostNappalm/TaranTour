@@ -5,7 +5,11 @@ $(document).ready(function(){
       placement: 'left'
     });
     //
+$(".exit").click(function(){
+        return confirm("Sei sicuro di voler uscire?");
 
+
+    });
 
 
     //Js per la Mappa applicazione

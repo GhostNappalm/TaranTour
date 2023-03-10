@@ -1,11 +1,8 @@
-
-
 body {
  font-family: Open Sans;
  margin: 0;
  width: 100%;
  overflow: hidden;
-
 }
 
 header {
@@ -75,7 +72,7 @@ li a:hover {
 
 .exit{
   background-color:#c14953ff;
-}
+  text-decoration: none;}
 
 .exit:hover{
   background-color:#B20808;
@@ -183,7 +180,7 @@ user-select: none;
   left:40vh;
   width: 160vh;
   height: 100vh;
-z-index: -1;
+  z-index: -1;
   background: url("../images/mappa1.png") no-repeat center center ;
   background-size: cover;
 
@@ -216,10 +213,10 @@ transform: translate(0vh, -0.4vh) scale(1.1,1.1);
 
 .mappaApp{
   position: absolute;
-  width: 110vh;
-  height: 60vh;
+  width: 140vh;
+  height: 50vh;
   top:20vh;
-  left: 50vh;
+  left: 42vh;
   z-index: 3;
   border-radius: 10%;
   background: url("../images/mappaApp.jpg") no-repeat center center ;
@@ -243,10 +240,10 @@ transform: translate(0vh, -0.4vh) scale(1.1,1.1);
 
 .posAttuale{
   position: absolute;
-  width:17vh;
-  height: 5.7vh;
+  width:21vh;
+  height: 7.1vh;
     border-radius: 15%;
-  border: 0.5vh solid  #4a8fe7;
+  border: 0.7vh solid  #4a8fe7;
   z-index: 4;
   box-shadow: 0vh 0vh 1vh  #4a8fe7;
   font-family: Open Sans;
@@ -279,11 +276,11 @@ transform: translate(0vh, -0.4vh) scale(1.1,1.1);
 }
 
 .tra_fe {
-transition: 0.3s;
+transition: 0.5s;
 }
 
 .tra_fe:hover {
-  transform: translate(0vh, -0.4vh) scale(1.05,1.05);
+  transform: translate(0vh, -0.4vh) scale(1.1,1.1);
   cursor: pointer;
 }
 

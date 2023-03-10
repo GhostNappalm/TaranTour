@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+   
+   <link rel="stylesheet" href="css\generalCss.css">
+
+   <style>
+#pop-up {
+  position: relative;
+  top: 200px;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+/*// POP-UP ANIMATION STYLES //*/
+
+#pop-up {
+  top: -400px;
+  transform-origin: 10px 10px;
+  animation: drop 0.5s ease forwards, swing 2s 3s ease forwards;
+}
+@keyframes drop {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(600px)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(550px)
+  }
+}
+
+.aiut{
+  width: 45%;
+  background-color:white;
+  z-index: 5;
+  right: 45vh;
+  top: 30vh;
+  padding: 1%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+
+   </style>
+
+   
+</head>
+<body>
+
+   <button id="apri-popup">Apri pop-up</button>
+   <div id="pop-up" style="display:none;">
+     
+
+      <div class="veloGrigio"></div>
+       <div class="aiut text-center"> 
+           <h3>Clicca su una delle tradizioni e festività presenti per visualizzare il contenuto</h3>
+           <input id="closebutton" class="btn btn-secondary" type="button" value="Chiudi">
+         </div>
+   </div>
+
+
+<script>
+
+$(document).ready(function() {
+  $('#apri-popup').click(function() {
+   
+    $('#pop-up').show();
+  });
+
+  $('#closebutton').click(function() {
+    $('#pop-up').hide();
+  });
+
+});
+   
+</script> 
+</body>
+
+
+</html>

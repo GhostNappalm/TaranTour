@@ -10,10 +10,10 @@
 
    <style>
 #pop-up {
-  position: relative;
-  top: 200px;
-  width: 500px;
-  margin: 0 auto;
+ 
+ /* top: 200px;
+  width: 500px;*/
+
   text-align: center;
 }
 
@@ -21,8 +21,8 @@
 /*// POP-UP ANIMATION STYLES //*/
 
 #pop-up {
-  top: -400px;
-  transform-origin: 10px 10px;
+  
+  
   animation: drop 0.5s ease forwards, swing 2s 3s ease forwards;
 }
 @keyframes drop {
@@ -30,11 +30,11 @@
     opacity: 0;
   }
   70% {
-    transform: translateY(600px)
+    transform: translateY(100px)
   }
   100% {
     opacity: 1;
-    transform: translateY(550px)
+    transform: translateY(95px)
   }
 }
 
@@ -42,8 +42,8 @@
   width: 45%;
   background-color:white;
   z-index: 5;
-  right: 45vh;
-  top: 30vh;
+  /*right: 45vh;
+  top: 30vh;*/
   padding: 1%;
   border-radius: 20px;
   display: flex;
@@ -51,26 +51,33 @@
   justify-content: center;
   align-items: center;
 
-
 }
 
+.grigio{
+  position: fixed;
+  width: 100%;
+  height: 80vh;
+background-color: gray;
+display: flex;
+      justify-content: center;
+      align-items: center;
+
+}
 
    </style>
 
    
 </head>
 <body>
-
-   <button id="apri-popup">Apri pop-up</button>
-   <div id="pop-up" style="display:none;">
-     
-
-      <div class="veloGrigio"></div>
+  <button id="apri-popup">Apri pop-up</button>
+<div class="grigio">
+   <div id="pop-up">
        <div class="aiut text-center"> 
            <h3>Clicca su una delle tradizioni e festività presenti per visualizzare il contenuto</h3>
            <input id="closebutton" class="btn btn-secondary" type="button" value="Chiudi">
          </div>
-   </div>
+        </div>
+</div>
 
 
 <script>

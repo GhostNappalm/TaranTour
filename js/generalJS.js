@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+  $('[class="chiud"]').tooltip({
+    placement: 'top'
+  });
+
     //Tooltip
  $('[data-toggle="tooltip"]').tooltip({
       placement: 'left'

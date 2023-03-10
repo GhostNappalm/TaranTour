@@ -186,6 +186,10 @@ user-select: none;
 
 }
 
+.chiudere .tooltip-inner, .chiudere .tooltip-arrow {
+  margin-bottom: 1.3vh;
+}
+
 .mappaAppIcon{
   position: absolute;
   right:35vh;

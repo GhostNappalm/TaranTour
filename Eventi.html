@@ -20,60 +20,56 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     
     <script type="text/javascript" src="js/generalJS.js"></script>
+    <script type="text/javascript" src="js/eventi.js"></script>
 
     <style>
-      * {
-        box-sizing: border-box}
-      .slide1, .slide2 {
-        display: none}
-      img {
-        vertical-align: middle;
-      }
-      .carosello {
-        left:45vh;
+
+      .card{
+        position: fixed;
         width: 70%;
-        position: relative;
-        top:5vh;
-        border: 0.5vh solid grey;
-        border-radius: 2%;
-        padding: 3vh;
+        height: 70vh;
+        border: transparent;
+        top: 23%;
+        left: 24%;
       }
-      .prec, .succ {
-        cursor: pointer;
-        user-select:none;
-        position: absolute;
-        margin: 1vh;
-        top: 50%;
-        width: 5vh;
-        height:5vh;
-        border:0.4vh solid #DDDDDD;
-        color: rgb(45,45,45);
-        font-size: 4vh;
-        transition: 0.5s ease;
-        border-radius:50%;
+
+      .row {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        text-decoration: none !important;
-        line-height: 4.5vh;
-      }
-      .prec {
-        left: 0vh;
       }
 
-       .succ {
-        right: 0;
-      }
-      .prec:hover, .succ:hover {
-        background-color: #DDDDDD;
-        color: black;
+      .col {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
       }
 
-      .desc{
-        font-size: 2vh;
+      svg {
+        transition: 0.5s;
       }
+
+      svg:hover {
+        transform: translate(0vh, -0.4vh) scale(1.1,1.1);
+      }
+
+      .col .tooltip-inner, .col .tooltip-arrow {
+  margin-bottom: 1.3vh;
+}
+
+    img {
+    width: 70%;
+    }
+
 
     </style>
   </head>
-  <body>
+  <body onload="slide()">
     <header>
       
       <img class="Logo"src="images\logo.png">
@@ -107,14 +103,14 @@
 
         <!-- Mappa APP -->
         <div class="veloGrigio"> </div>
-        <div class="mappaApp">  
-        <svg id="closeBtn" xmlns="http://www.w3.org/2000/svg" fill="red"  class="bi bi-x-circle" viewBox="0 0 16 16">
+        <div class="mappaApp chiudere">  
+        <svg id="closeBtn" class="chiud" data-toggle="tooltip" title="Chiudi" xmlns="http://www.w3.org/2000/svg" fill="red"  class="bi bi-x-circle" viewBox="0 0 16 16">
             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
         </svg>
         </div>
         <div class="posAttuale" style="top:36.3vh; left: 155vh;">
-            <p style=" font-size: 2.5vh;font-weight: bold; position: relative; top: 6vh; left:6vh;color: #4a8fe7 ; ">Sei qui</p>
+            <p style=" font-size: 2.5vh;font-weight: bold; position: relative; top: 7.5vh; left:6vh;color: #4a8fe7 ; ">Sei qui</p>
         </div>
 
         <!-- Side Menu -->
@@ -129,65 +125,51 @@
     </ul>
   <!-- INIZIO CONTENT -->
 
-    <div class="carosello" style="display: none;">
-      <div class="slide1">
-        <img src="IMMAGINE1.JPG" style="max:100%">
+    <div class="card">
+
+
+      <div class="row">
+        <div class="col">
+
+          <svg id="precc" onclick="preview()" class="frecc" xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" title="slide precedente" width="50" height="50" fill="currentColor" class="bi bi-arrow-left-square" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+          </svg>
+
+        </div>
+        <div class="col-10">
+            <!-- CONTENUTO SLIDE -->
+          
+            <section>
+              <img src="images/villa_peripato.webp">
+              <p> Questo evento ha origine enl 453452345 dwqd wd qwdqw dqd dq dwdd wdwd qdwdwdq dwqdwdq derferf qwdefregtr hfgreg ergre gregerg ergr g ergregreg erg ergrgg eg rgeg rgeg gergreg eg ege g egr gregreg eg erg rg eg e gegeg geg</p>
+            </section>
+
+            <section>
+              <img src="images/pett_2.jpeg">
+              <p> ziopera</p>
+            </section>
+
+
+      
+        </div>
+        <div class="col">
+
+          <svg id="succ" onclick="next()" class="frecc" xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" title="slide successiva" width="50" height="50" fill="currentColor" class="bi bi-arrow-right-square" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+          </svg>
+
+        </div>
+  
       </div>
-      <div class="slide1">
-        <img src="IMMAGINE2.JPG" style="width:100%">
-      </div>
-      <div class="slide1">
-        <img src="IMMAGINE3.JPG" style="width:100%">
-      </div>
-      <a class="prec" onclick="cambiaSlide(-1, 0)">&#10094;
-      </a>
-      <a class="succ" onclick="cambiaSlide(1, 0)">&#10095;
-      </a>
+
     </div>
 
-    </p>
-    <div class="carosello">
-      <div class="slide2">
-        <img src="images/villa_peripato.webp" style="width:100vh; height: 60vh;">
-        <div class="desc"> Questo evento ha origine enl 453452345 dwqd wd qwdqw dqd dq dwdd wdwd qdwdwdq dwqdwdq derferf qwdefregtr hfgreg ergre gregerg ergr g ergregreg erg ergrgg eg rgeg rgeg gergreg eg ege g egr gregreg eg erg rg eg e gegeg geg</div>
-      </div>
-      <div class="slide2">
-        <img src="images/monumento_marinai.jpg" style="width:100vh; height: 60vh;">
-        <div class="desc"> Questo evento ha origine enl 213123 dwqd wd qwdqw dqd dq dwdd wdwd qdwdwdq dwqdwdq derferf qwdefregtr hfgreg ergre gregerg ergr g ergregreg erg ergrgg eg rgeg rgeg gergreg eg ege g egr gregreg eg erg rg eg e gegeg geg</div>
-      </div>
-      <div class="slide2">
-        <img src="images/palazzo_governo.jpg" style="width:100vh; height: 60vh;">
-        <div class="desc"> Questo evento ha origine enl 87456733 dwqd wd qwdqw dqd dq dwdd wdwd qdwdwdq dwqdwdq derferf qwdefregtr hfgreg ergre gregerg ergr g ergregreg erg ergrgg eg rgeg rgeg gergreg eg ege g egr gregreg eg erg rg eg e gegeg geg</div>
-      </div>
-      <a class="prec" onclick="cambiaSlide(-1, 1)">&#10094;
-      </a>
-      <a class="succ" onclick="cambiaSlide(1, 1)">&#10095;
-      </a>
-    </div>
+
     <script>
-      var slideTab = [1,1];
-      var slideId = []
-      var slides = document.getElementsByClassName("carosello");
-      for (var e = 1; e <= slides.length; e++){
-        slideId.push("slide"+e);
-      }
-      creaSlide(1, 0);
-      creaSlide(1, 1);
-      function cambiaSlide(n, no) {
-        creaSlide(slideTab[no] += n, no);
-      }
-      function creaSlide(n, no) {
-        var i;
-        var x = document.getElementsByClassName(slideId[no]);
-        if (n > x.length) {
-          slideTab[no] = 1}
-        if (n < 1) {
-          slideTab[no] = x.length}
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        x[slideTab[no]-1].style.display = "block";
-      }
-    </script>
+      $('[class="frecc"]').tooltip({
+          placement: 'top'
+        });
+
+        </script>
   </body>
 </html>

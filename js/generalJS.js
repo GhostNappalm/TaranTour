@@ -17,7 +17,31 @@ $(".exit").click(function(){
 
 
     //Js per la Mappa applicazione
-    $('.veloGrigio').addClass('hidden');
+    $('#mappa').click(function() {
+      $('#pu_map').fadeIn(200);
+      $('#pop-up-mappa').show();
+    });
+  
+    $('#cl_btn_map').click(function() {
+      $('#pu_map').hide();
+      $('#pop-up-mappa').hide();
+    });
+
+
+    //Js per Help
+    $('#help').click(function() {
+      $('#pu_hlp').fadeIn(200);
+      $('#pop-up-help').show();
+    });   
+
+    $('#cl_btn_hlp').click(function() { 
+      $('#pu_hlp').hide();
+      $('#pop-up-help').hide();
+    });
+
+
+    //Js per la Mappa applicazione
+ /*   $('.veloGrigio').addClass('hidden');
     $('.mappaApp').addClass('hidden');
     $('.posAttuale').addClass('hidden');
     $('.aiut').addClass('hidden');
@@ -51,7 +75,7 @@ $(".exit").click(function(){
                 $('header').css('z-index', '1');
                 $('.aiut').addClass('hidden');
                 }
-              });
+              }); */
 
 
     //

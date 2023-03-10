@@ -101,6 +101,15 @@
         left: 50vh;
         
       }
+      .marg-10{
+        margin-top: 12vh;
+      }
+
+      .arrTop
+      {
+        transform: translateY(-12vh);
+
+      }
 
 
 
@@ -216,13 +225,12 @@
       </svg>
     </div>
 
-    <div class="Pin" style="top: 48vh;left: 86vh;" data-toggle="popover" 
-    title="Città vecchia" 
-    data-content="<img src='images/citta_vecchia.jpg' style='width:40vh; float:left; padding: 0vh 2vh 1vh 0vh'>
+    <div class="Pin" style="top: 63vh;left: 100vh;" data-toggle="popover" 
+    title="Colonne Doriche" 
+    data-content="<img src='images/colonne.jpeg' style='width:40vh; float:left; padding: 0vh 2vh 1vh 0vh'>
     
-    La città vecchia di Taranto è il cuore storico della città pugliese, situata sulla costa ionica della regione. La città vecchia, conosciuta anche come Taranto vecchia, è un labirinto di stradine e vicoli stretti, circondati da mura di epoca medievale.
-    La città vecchia di Taranto è caratterizzata da un'architettura tipica delle città del sud Italia, con palazzi antichi, chiese barocche e archi e portali in pietra leccese. Tra le principali attrazioni della città vecchia si segnalano la Cattedrale di San Cataldo, il Castello Aragonese, la Chiesa di San Domenico Maggiore e la Chiesa di San Pietro Martire.">
-      <svg data-toggle="tooltip" title="Città Vecchia" class="marker right" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
+    Le Colonne Doriche di Taranto sono un importante sito archeologico della città. Si tratta di due imponenti colonne, alte circa 8 metri, che facevano parte di un tempio dorico dedicato alla dea Atena. Secondo gli studiosi, le colonne risalgono al V secolo a.C. e sono considerate uno dei più antichi esempi di architettura dorica in Italia. Sono realizzate in calcare locale e presentano una decorazione scultorea raffigurante motivi geometrici e animali fantastici. Le Colonne Doriche di Taranto rappresentano uno dei simboli più importanti dell'antica Magna Grecia e sono un'attrazione turistica molto apprezzata della città.">
+      <svg data-toggle="tooltip" title="Colonne Doriche" class="marker right" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
       </svg>
     </div>
@@ -260,29 +268,59 @@
       </svg>
     </div>
 
+    <div class="Pin" style="top: 37vh;left: 68vh;" src="images/Chiesa_San_Domenico.jpg" data-toggle="popover" 
+    title="Chiesa di San Domenico Maggiore" 
+    data-content="<img src='images/Chiesa_San_Domenico.jpg' style='width:40vh; float:left; padding: 0vh 2vh 1vh 0vh'>
+    
+   La Chiesa di San Domenico Maggiore è uno dei principali luoghi di culto di Taranto. Costruita nel XIII secolo, è stata modificata e ampliata nel corso dei secoli successivi. La facciata presenta un portale gotico e un rosone centrale, mentre l'interno è a navata unica con cappelle laterali e ospita pregevoli opere d'arte, tra cui affreschi, tele e statue. Alcune delle opere più importanti sono il Crocifisso ligneo del XVII secolo, il dipinto della Madonna delle Grazie del XVIII secolo e il fonte battesimale in pietra del XVI secolo. La chiesa è stata danneggiata dal terremoto del 1972 ma è stata successivamente restaurata.">
+      <svg data-toggle="tooltip" title="Chiesa San Domenico" class="marker right" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
+        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+      </svg>
+    </div>
+
+    <div class="Pin" style="top: 49vh;left: 80vh;" src="images/Cattedrale_San_Cataldo.jpg" data-toggle="popover" 
+    title="Cattedrale San Cataldo" 
+    data-content="<img src='images/Cattedrale_San_Cataldo.jpg' style='height:45vh; float:left; padding: 0vh 2vh 1vh 0vh'>
+    
+   La Cattedrale di San Cataldo è il principale luogo di culto cattolico della città di Taranto, situata nel cuore del centro storico. La sua costruzione risale al X secolo, ma è stata ricostruita più volte nel corso dei secoli a causa di eventi bellici e catastrofici. Il suo stile architettonico è un mix di elementi romanici, gotici, bizantini e barocchi, frutto delle diverse fasi di restauro. La facciata è caratterizzata da un rosone centrale e da tre portali, uno dei quali è decorato con bassorilievi raffiguranti scene della vita di San Cataldo. L'interno è a croce latina con tre navate e conserva pregevoli opere d'arte, tra cui il monumentale altare maggiore in marmo e la cripta dove è sepolto il santo patrono della città.">
+      <svg data-toggle="tooltip" title="Cattedrale San Cataldo" class="marker right" xmlns="http://www.w3.org/2000/svg"  fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" >
+        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+      </svg>
+    </div>
+
   </div>
   
-
+Cattedrale_San_Cataldo
 
   <script>
 
      $(document).ready(function() {
+
       
       $("[data-toggle=popover]").popover({
       html: true,
       trigger: 'focus',
       placement: function (context, source) {
         var position = $(source).position();
-        if (position.left > 930) {
+      
+        if (position.left > 940) {
             return "left";
         }
 
         if (position.left < 930) {
             return "right";
         } 
-    },
+      }
+
    }).on("click", function () {
           var _this = this;
+          var position = $(this).position();
+      $(this).popover('show');
+
+        if (position.top < 400) { //funziona bene se lo zoom del browser è 100%
+            $(this).siblings(".popover").addClass("marg-10");
+            $(".arrow").addClass("arrTop");
+        }
           
           $(this).popover('show');
 
@@ -301,11 +339,13 @@
       $("[data-toggle=popover]").popover('show');
       $("[data-toggle=popover]").popover('hide');
 
+
       });
 
       $(".right").tooltip({
       placement: 'right',
       });
+
 
 
 

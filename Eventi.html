@@ -27,10 +27,11 @@
       .card{
         position: fixed;
         width: 70%;
-        height: 70vh;
-        border: transparent;
-        top: 23%;
-        left: 24%;
+        height: 75vh;
+        border:transparent;
+        top: 20%;
+        left: 26%;
+
       }
 
       .row {
@@ -50,6 +51,12 @@
         text-align: center;
       }
 
+      .col-10{
+        border: 2px solid darkgray;
+        border-radius: 20px;
+        padding: 2%;
+      }
+
       svg {
         transition: 0.5s;
       }
@@ -59,12 +66,27 @@
       }
 
       .col .tooltip-inner, .col .tooltip-arrow {
-  margin-bottom: 1.3vh;
-}
+        margin-bottom: 1.3vh;
+      }
 
-    img {
-    width: 70%;
+    video::-webkit-media-controls-panel{
+      position: relative;
+      
     }
+
+    .vidEv{
+      width: 80%; 
+      border-radius: 20px;
+      top:1vh;
+    }
+
+     h2 {
+      font-size: 4vh;
+      font-weight: bolder;    
+      font-family: 'Salsa';
+    }
+
+
 
 
     </style>
@@ -140,13 +162,43 @@
             <!-- CONTENUTO SLIDE -->
           
             <section>
-              <img src="images/villa_peripato.webp">
-              <p> Questo evento ha origine enl 453452345 dwqd wd qwdqw dqd dq dwdd wdwd qdwdwdq dwqdwdq derferf qwdefregtr hfgreg ergre gregerg ergr g ergregreg erg ergrgg eg rgeg rgeg gergreg eg ege g egr gregreg eg erg rg eg e gegeg geg</p>
+      
+              <video class="vidEv" controls src="video/Medimex.mp4">
+                Il tuo browser non supporta il tag video.
+              </video>
+
+              <h2>Medimex</h2>
+              <p> Il Medimex Taranto è un festival internazionale della musica e dell'industria musicale che si tiene a Taranto. L'evento promuove la musica italiana e internazionale, offre opportunità per la crescita dell'industria musicale locale e si concentra sulla cultura musicale del Mediterraneo.</p>
             </section>
 
             <section>
-              <img src="images/pett_2.jpeg">
-              <p> ziopera</p>
+      
+              <video class="vidEv" controls src="video/RaffoFest.mp4">
+                Il tuo browser non supporta il tag video.
+              </video>
+
+              <h2>Raffo Festival</h2>
+              <p>Il Raffo Festival è un festival musicale che si tiene a Taranto. L'evento ospita artisti emergenti e promuove la musica indipendente e sperimentale, offrendo spettacoli dal vivo, performance artistiche e incontri culturali. Ha luogo ogni anno nel mese di settembre.</p>
+            </section>
+
+            <section>
+      
+              <video class="vidEv" controls src="video/Comix.mp4">
+                Il tuo browser non supporta il tag video.
+              </video>
+
+              <h2>Taranto Comix</h2>
+              <p>Il Taranto Comix è un festival dedicato al fumetto, ai giochi di ruolo e alle culture popolari che si tiene a Taranto. L'evento presenta mostre, incontri con autori, concorsi, spettacoli e cosplay, offrendo un'esperienza per appassionati e curiosi. Ha luogo ogni anno nel mese di maggio.</p>
+            </section>
+
+            <section>
+      
+              <video class="vidEv" controls src="video/AperturaPonte.mp4">
+                Il tuo browser non supporta il tag video.
+              </video>
+
+              <h2>Apertura ponte girevole</h2>
+              <p>Il ponte girevole di Taranto è un'opera di ingegneria meccanica che permette la rotazione di un tratto della strada per consentire il passaggio delle imbarcazioni. È un evento ricorrente in cui il ponte viene aperto per permettere il transito di imbarcazioni come la Vespucci (veliero) e la Cavour (portaerei) nel Mar Piccolo.</p>
             </section>
 
 
@@ -169,6 +221,10 @@
       $('[class="frecc"]').tooltip({
           placement: 'top'
         });
+      $(document).ready(function() {
+        $("video").prop("volume", 0.5);
+      });
+      
 
         </script>
   </body>

@@ -9,11 +9,11 @@ $(document).ready(function(){
       placement: 'left'
     });
     //
+    /*
 $(".exit").click(function(){
         return confirm("Sei sicuro di voler uscire?");
-
-
     });
+    */
 
 
     //Js per la Mappa applicazione
@@ -39,6 +39,16 @@ $(".exit").click(function(){
       $('#pop-up-help').hide();
     });
 
+    //Js per Exit
+        $('#exit').click(function() {
+          $('#pu_ext').fadeIn(200);
+          $('#pop-up-exit').show();
+        });   
+    
+        $('#cl_btn_ext').click(function() { 
+          $('#pu_ext').hide();
+          $('#pop-up-exit').hide();
+        });
 
     //Js per la Mappa applicazione
  /*   $('.veloGrigio').addClass('hidden');

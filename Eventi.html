@@ -29,6 +29,7 @@
         width: 70%;
         height: 75vh;
         border:transparent;
+        background-color: transparent;
         top: 20%;
         left: 26%;
 
@@ -36,10 +37,7 @@
 
       .row {
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+
       }
 
       .col {
@@ -54,7 +52,12 @@
       .col-10{
         border: 2px solid darkgray;
         border-radius: 20px;
+        background-color: white;
         padding: 2%;
+        height: 100%;
+        /*height: 75vh;*/
+        text-align: center;
+        
       }
 
       svg {
@@ -75,7 +78,7 @@
     }
 
     .vidEv{
-      width: 50%; 
+      width: 75%; 
       border-radius: 20px;
       top:1vh;
     }
@@ -141,6 +144,26 @@
            </div>   
        </div>
 
+       <!-- Exit Pop-Up -->
+
+              <div id="pu_ext" class="row_sfond" style="display: none;">
+                <div id="pop-up-exit" class="pop-up row_conte hlpp" >
+                    <div class="aiuto" style="padding:1%; width: 75%;" > 
+                        <div class="tit_row">  
+                          
+                          <h2 style="font-family: 'Salsa'; font-size: 350%; font-weight: bold; color: rgb(218, 84, 79);"> Attenzione </h2> 
+                          <h3>Stai abbandonando l'applicazione TaranTour, sei sicuro?</h3>
+                          
+                         </div> 
+                         <div style="margin: 2.5%;">
+                         <input id="cl_btn_ext" class="btn btn-danger" type="button" value="No, voglio rimanere" style="font-size: 130%;">   
+                        <input onclick="window.location.href='TaranTour.html'" type="button" class="btn btn-outline-danger" value="Sì, sono sicuro" style="font-size: 140%;">
+                        </div>
+                    </div>
+             
+                 </div>   
+             </div>
+
         <!-- Side Menu -->
     <ul class="text-center">
         <li><a href="Introduzione.html">Introduzione</a></li>
@@ -149,7 +172,7 @@
         <li><a href="Trad_Fest.html">Tradizioni e festività</a></li>
         <li><a class="selected" href="Eventi.html">Eventi</a></li>
         <li><a href="Chi_Siamo.html">Chi siamo?</a></li>
-        <li><a class="exit" href="TaranTour.html">Esci</a></li>
+        <li><a id="exit" class="exit">Esci</a></li>
     </ul>
   <!-- INIZIO CONTENT -->
 
@@ -159,7 +182,7 @@
       <div class="row">
         <div class="col">
 
-          <svg id="precc" onclick="preview()" class="frecc" xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" title="slide precedente" width="50" height="50" fill="currentColor" class="bi bi-arrow-left-square" viewBox="0 0 16 16">
+          <svg style="display: none;" id="precc" onclick="preview()" class="frecc" xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" title="slide precedente" width="50" height="50" fill="currentColor" class="bi bi-arrow-left-square" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
           </svg>
 
@@ -167,39 +190,39 @@
         <div class="col-10">
             <!-- CONTENUTO SLIDE -->
           
-            <section>
-      <!--
+            <section style="display: none;">
+      <!---->
               <video class="vidEv" controls src="video/Medimex.mp4">
                 Il tuo browser non supporta il tag video.
               </video>
--->
+
               <h2>Medimex</h2>
               <p> Il Medimex Taranto è un festival internazionale della musica e dell'industria musicale che si tiene a Taranto. L'evento promuove la musica italiana e internazionale, offre opportunità per la crescita dell'industria musicale locale e si concentra sulla cultura musicale del Mediterraneo.</p>
             </section>
 
-            <section>
-      <!--
+            <section style="display: none;">
+      <!---->
               <video class="vidEv" controls src="video/RaffoFest.mp4" >
                 Il tuo browser non supporta il tag video.
               </video>
--->
+
               <h2>Raffo Festival</h2>
               <p>Il Raffo Festival è un festival musicale che si tiene a Taranto. L'evento ospita artisti emergenti e promuove la musica indipendente e sperimentale, offrendo spettacoli dal vivo, performance artistiche e incontri culturali. Ha luogo ogni anno nel mese di settembre.</p>
             </section>
 
-            <section>
-      <!-- 
+            <section style="display: none;">
+      <!-- -->
               <video class="vidEv" controls src="video/Comix.mp4" >
                 Il tuo browser non supporta il tag video.
               </video>
--->
+
               <h2>Taranto Comix</h2>
               <p>Il Taranto Comix è un festival dedicato al fumetto, ai giochi di ruolo e alle culture popolari che si tiene a Taranto. L'evento presenta mostre, incontri con autori, concorsi, spettacoli e cosplay, offrendo un'esperienza per appassionati e curiosi. Ha luogo ogni anno nel mese di maggio.</p>
             </section>
 
             <section style="display: none;">
       
-              <video class="vidEv" controls src="video/AperturaPonte.mp4" style="display: none;">
+              <video class="vidEv" controls src="video/AperturaPonte.mp4">
                 Il tuo browser non supporta il tag video.
               </video>
 

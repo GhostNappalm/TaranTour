@@ -1,6 +1,7 @@
 var c = 0;
 function slide() {
-$('section').hide();
+//$('section').hide();
+$('section').css('display', 'none');
 $('video').load();
 switch (c) {
 case 0 : 

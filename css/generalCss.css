@@ -264,13 +264,23 @@ transition: 0.5s;
  }
 }
 
-.aiuto{
+.mapp{
  width: 57%;
  background-color:#f7f7ff;
  z-index: 5;
  padding: 1%;
  border-radius: 20px;
 }
+
+.aiuto{
+  margin-top: 18%;
+  width: 100%;
+  font-family: 'Salsa';
+  background-color: white;
+  z-index: 5;
+  padding: 1%;
+  border-radius: 20px;
+ }
 
 .row_sfond {
   position: absolute;

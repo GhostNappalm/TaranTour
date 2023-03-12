@@ -48,15 +48,16 @@ ul {
 li a {
 
   width: 40vh; 
-  font-size: 3.7vh;
+  font-size: 3.6vh;
   /*font-family: 'Salsa';*/
   font-family: 'Salsa';
   display: block;
   color: #000;
-  padding: 16.91%;
+padding-top: 3.43vh;
+padding-bottom: 3.43vh;
   border: 0.2vh solid black;
   /*background-color: #f7f7ffff;*/
-  background-color: #c1cddf;
+  background-color: #d1e3f5;
   text-decoration: none;
   transition: 0.3s;
   -webkit-user-select: none; /* Safari */
@@ -163,13 +164,13 @@ background: linear-gradient(360deg, #297AC5 0%, rgba(7, 114, 214, 0) 100%),
             rgba(255, 0, 0, 0.78) 69.27%, 
             rgba(255, 0, 0, 0) 100%);
 
-justify-content: middle;
+justify-content: center;
 display: flex;
 }
 
 .Titolo{
-  font-size: 9vh;
-  margin: 1vh 1vh 3vh 3vh;
+  font-size: 8.5vh;
+  margin: 1.5vh;
   font-family: 'Salsa';
 }
 

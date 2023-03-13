@@ -191,16 +191,7 @@ user-select: none;
 }
 
 
-.mappa{
-  position: absolute;
-  top:14vh;
-  left:40vh;
-  width: 160vh;
-  height: 100vh;
-  z-index: -1;
-  background: url("../images/mappa1.png") no-repeat center center ;
-  background-size: cover;
-}
+
 
 .chiudere .tooltip-inner, .chiudere .tooltip-arrow {
   margin-bottom: 1.3vh;

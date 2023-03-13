@@ -44,7 +44,7 @@
 
 
 .container {
-  width: 130%;
+  width: 100%;
 /*position: fixed;
 top: 30%;
 left: 22%;*/
@@ -66,8 +66,9 @@ flex-direction: row;
 
 .card h2{
     margin: 10px 0;
-    padding-left: 17%;
-  padding-right: 17%;
+    padding-left: 24%;
+  padding-right: 24%;
+  font-size: 25px;
   font-family: 'Salsa';
 }
 
@@ -78,11 +79,7 @@ flex-direction: row;
     transition: all 0.4s ease;
 }
 
-.card .cont .link i{
-    font-size: 25px;
-    color: rgb(82, 82, 82);
-    transition: all 0.2s ease;
-}
+
 
 .card .cont .link i:hover{
     color: black;
@@ -108,8 +105,8 @@ height: 166px;
 
 .team {
         width: 100%;
-        margin-top: 8%;
-        margin-bottom: 18%;
+        margin-top: 5%;
+        margin-bottom: 20%;
         font-family: 'Salsa';
         background-color: transparent;
         top: 6vh;
@@ -130,7 +127,7 @@ height: 166px;
 
        .po {
         margin-top: 4%;
-        font-size: 122%;
+        font-size: 119%;
        }
        img {
         object-fit: cover;
@@ -208,13 +205,13 @@ height: 166px;
         <!-- Side Menu -->
     <div>
     <ul class="text-center">
-        <li><a href="Introduzione.html">Introduzione</a></li>
-        <li><a href="Storia.html">Storia</a></li>
-        <li><a href="Attrazioni.html">Attrazioni culturali</a></li>
-        <li><a href="Trad_Fest.html">Tradizioni e festività</a></li>
-        <li><a href="Eventi.html">Eventi</a></li>
-        <li><a class="selected" href="Chi_Siamo.html">Chi siamo?</a></li>
-        <li><a id="exit" class="exit">Esci</a></li>
+      <li onclick="location.href='Introduzione.html';">Introduzione</li>
+      <li onclick="location.href='Storia.html';">Storia</li>
+      <li onclick="location.href='Attrazioni.html';">Attrazioni culturali</li>
+      <li onclick="location.href='Trad_Fest.html';">Tradizioni e festività</li>
+      <li onclick="location.href='Eventi.html';">Eventi</li>
+      <li class="selected" onclick="location.href='Chi_Siamo.html';">Chi siamo?</li>
+      <li id="exit" class="exit">Esci</li>
     </ul>
     </div>
 

@@ -1,5 +1,7 @@
 body {
- font-family: Open Sans;
+ /*font-family: Open Sans;*/
+  font-family: 'Salsa', regular;
+
  margin: 0;
  width: 100%;
  overflow: hidden;

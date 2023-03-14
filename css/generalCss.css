@@ -1,11 +1,21 @@
 body {
- font-family: Open Sans;
+ /*font-family: Open Sans;*/
+ font-family: 'Salsa', sans-serif;
+
  margin: 0;
  width: 100%;
  overflow: hidden;
- background-image: url("https://royaltyfreefootages.com/upload/video/1633089474_Zoom%20white%20backgrounds.jpg");
- background-repeat: no-repeat;
+ background-image: url("../images/background.jpg");
  background-size: cover;
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+
+@font-face {
+  font-family: 'Salsa';
+  src: url('Salsa-Regular.ttf');
+
 }
 
 header {
@@ -44,9 +54,10 @@ ul {
   /* background-color: #f1f1f1; /* Imposta il colore di sfondo */
 }
 
-	
-li a {
 
+	
+li {
+  
   width: 40vh; 
   font-size: 3.6vh;
   /*font-family: 'Salsa';*/
@@ -66,7 +77,7 @@ padding-bottom: 3.43vh;
 }
 
 
-li a:hover {
+li:hover {
   transform:  scale(0.9,0.9);
   background-color:#91C2FFFF;
   color: white;
@@ -169,7 +180,7 @@ display: flex;
 }
 
 .Titolo{
-  font-size: 8.5vh;
+  font-size: 8.2vh;
   margin: 1.5vh;
   font-family: 'Salsa';
 }
@@ -183,16 +194,7 @@ user-select: none;
 }
 
 
-.mappa{
-  position: absolute;
-  top:14vh;
-  left:40vh;
-  width: 160vh;
-  height: 100vh;
-  z-index: -1;
-  background: url("../images/mappa1.png") no-repeat center center ;
-  background-size: cover;
-}
+
 
 .chiudere .tooltip-inner, .chiudere .tooltip-arrow {
   margin-bottom: 1.3vh;

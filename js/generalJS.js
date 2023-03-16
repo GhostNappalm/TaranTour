@@ -29,7 +29,7 @@ $(".exit").click(function(){
 
 
     //Js per Help
-    $('#help').click(function() {
+  /*  $('#help').click(function() {
       $('#pu_hlp').fadeIn(200);
       $('#pop-up-help').show();
     });   
@@ -37,6 +37,16 @@ $(".exit").click(function(){
     $('#cl_btn_hlp').click(function() { 
       $('#pu_hlp').hide();
       $('#pop-up-help').hide();
+    });
+    */
+    var popup = document.getElementById("pu_ext");
+
+    document.addEventListener("keydown", function(event) {
+      // controlla se il tasto premuto è "Invio" (codice 13)
+      if (event.keyCode === 13) {
+        // chiudi il pop-up
+        popup.style.display = "none";
+      }
     });
 
     //Js per Exit

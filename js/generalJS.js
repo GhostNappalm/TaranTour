@@ -29,7 +29,7 @@ $(".exit").click(function(){
 
 
     //Js per Help
-  /*  $('#help').click(function() {
+    $('#help').click(function() {
       $('#pu_hlp').fadeIn(200);
       $('#pop-up-help').show();
     });   
@@ -38,7 +38,7 @@ $(".exit").click(function(){
       $('#pu_hlp').hide();
       $('#pop-up-help').hide();
     });
-    */
+    
     var popup = document.getElementById("pu_ext");
 
     document.addEventListener("keydown", function(event) {
@@ -50,7 +50,7 @@ $(".exit").click(function(){
     });
 
     //Js per Exit
-        $('#exit').click(function() {
+   /**/     $('#exit').click(function() {
           $('#pu_ext').fadeIn(200);
           $('#pop-up-exit').show();
         });   

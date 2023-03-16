@@ -80,7 +80,7 @@ padding-bottom: 3.43vh;
 li:hover {
   transform:  scale(0.9,0.9);
   background-color:#91C2FFFF;
-  color: white;
+  /*color: white;*/
   text-decoration: none;
 }
 
@@ -121,7 +121,10 @@ li:hover {
 }
 
 .cool {
-color: white;
+  font-family: 'Salsa', sans-serif;
+  font-size: 22.5px;
+/*color: white;*/
+color: #000;
 cursor: pointer;
 }
 
@@ -215,7 +218,7 @@ user-select: none;
 }
 
 .mappaAppIcon:hover{
-  fill:white;
+  /*fill:white;*/
   transform: translate(0vh, -0.4vh) scale(1.1,1.1);
   cursor: pointer;
 }

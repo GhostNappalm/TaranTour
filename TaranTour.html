@@ -8,19 +8,36 @@
     <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap-3.3.7/dist/css/bootstrap.min.css">
 
-
-
-    
-
     	<style type="text/css">
 
 
-    		body{
+    	/*	body{
     			background-image: url("images/Splash_image.jpg");
  			background-repeat: no-repeat;
  			background-size: cover;
  			user-select: none;
-    		}
+    		}*/
+
+			.wrapper {
+				background-image: url("images/Splash_image.jpg");
+				background-size: cover;
+				background-position: center center;
+				background-attachment: fixed;
+			}
+
+			.wrapper:after {
+				position: relative;
+				z-index: -1;
+			content: "";
+			display: block;
+			height: 1000px;
+			background: rgba(0, 0, 0, 0.5);
+			mix-blend-mode: difference;
+			}
+
+			body:after {
+				mix-blend-mode: difference;
+			}
 
 		.Logoo{
     			width: 18vh;
@@ -43,6 +60,12 @@
         		justify-content: center;
         		align-items: center;
         		text-align: center;
+			}
+
+		/**/	@media (max-width: 767px) {
+  				.row {
+    					margin-bottom: 14px;
+  				}
 			}
 			
 			.sfo {
@@ -88,34 +111,25 @@
 
 	</head>
 	<body>
+		<div class="wrapper">
 	<div class="row">
 		<!-- <img class="Logoo" src="images\logo.png"> 
 		<img draggable="false" class="LogoUni" src="images\logo_uni.png" alt="Logo Università di Bari">-->
 		<img  draggable="false" class="Logoo" src="images\PPM.ico"> 
-		
       	<div class="SfondoTitolo">
       	<h1 class="Titolo" style="color:white"> TaranTour </h1>
       	</div>
 
       	<img draggable="false" class="LogoUni" src="images\logo_uni.png" alt="Logo Università di Bari">
+		</div>
 
+		<div class="row position-absolute cont">
+			<p onclick="window.location.href = 'Introduzione.html'" class="ava"> Clicca qui per continuare</div>
 
-
-
-
-</div>
-
-
-<div class="row position-absolute cont">
-<p onclick="window.location.href = 'Introduzione.html'" class="ava"> Clicca qui per continuare</div>
-
-	<div class="row position-absolute cont;" style="top: 84vh;">
-		<p class="avar" style="font-family: Arial, Helvetica, sans-serif; color: darkgray; font-size: 155%;"> Copyright © 2023 - TaranTour</p>
-</div>     
-
+				<div class="row position-absolute cont;" style="top: 84vh;">
+					<p class="avar" style="font-family: Arial, Helvetica, sans-serif; color: darkgray; font-size: 155%;"> Copyright © 2023 - TaranTour</p>
+			</div>     
+	</div>
 	</body>
-
-	
-	
 
 </html>

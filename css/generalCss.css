@@ -153,6 +153,13 @@ padding-right: 0.5vh;
 font-size: 2vh;
 }
 
+.lig {
+  width: 19vh;
+  padding: 1%;
+  border: none;
+  background-color: transparent;
+}
+
 .lig:hover {
 background-color: #F5F5F5;
 }

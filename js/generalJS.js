@@ -29,6 +29,7 @@ $(".exit").click(function(){
 
 
     //Js per Help
+
     $('#help').click(function() {
       $('#pu_hlp').fadeIn(200);
       $('#pop-up-help').show();

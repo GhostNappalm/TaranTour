@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <style>
+
+/*Now the CSS*/
+* {margin: 0; padding: 0;}
+
+.tree {
+  width: 100%;
+
+    display: flex;
+   justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tree .ul_map {
+	padding-top: 20px; position: relative;
+	/*margin-left: -1%;
+  margin-right: -1%;*/
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+/*
+.tree .tra {
+  margin-left: -15%;
+  margin-right: -15%;
+}*/
+
+
+.tree .li_map {
+	float: left; text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 5px 0 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree .li_map::before, .tree .li_map::after{
+	content: '';
+	position: absolute; top: 0; right: 50%;
+	border-top: 3px solid #ccc;
+	width: 50%; height: 20px;
+}
+.tree .li_map::after{
+	right: auto; left: 50%;
+	border-left: 3px solid #ccc;
+}
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+.tree .li_map:only-child::after, .tree .li_map:only-child::before {
+	display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree .li_map:only-child{ padding-top: 0;}
+
+/*Remove left connector from first child and 
+right connector from last child*/
+.tree .li_map:first-child::before, .tree .li_map:last-child::after{
+	border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree .li_map:last-child::before{
+	border-right: 3px solid #ccc;
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+}
+.tree .li_map:first-child::after{
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree .ul_map .ul_map::before{
+	content: '';
+	position: absolute; top: 0; left: 50%;
+	border-left: 3px solid #ccc;
+	width: 0; height: 20px;
+}
+
+.tree .li_map a{
+	border: 3px solid #ccc;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #666;
+	font-family: Salsa;
+	font-size: 110%;
+	display: inline-block;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree .li_map a:hover{
+	background: #c8e4f8; color: #000; border: 3px solid #94a0b4;
+}
+/*Connector styles on hover*/
+
+
+</style>
+    
+  </head>
+  <body>
+
+
+    <div class="tree">
+      <ul class="ul_map">
+        <li class="li_map">
+          <a href="#">TaranTour</a>
+          <ul class="ul_map">
+            <li class="li_map">
+              <a href="#">Introduzione</a>
+            </li>
+            <li class="li_map">
+              <a href="#">Storia</a>
+            </li>
+            <li class="li_map">
+              <a href="#">Attrazioni <br> culturali</a>
+            </li>
+                    <li class="li_map tra">
+                      <a href="#">Tradizioni e <br> festività</a>
+                      <ul class="ul_map">
+                        <li class="li_map"><a href="#">i Riti della <br> settimana santa</a></li>
+                        <li class="li_map"><a href="#">Santa Cecilia</a></li>
+                        <li class="li_map"><a href="#">San Cataldo</a></li>
+                        <li class="li_map"><a href="#">Il Palio</a></li>
+                      </ul>
+                    </li>
+                    <li class="li_map">
+                      <a href="#">Eventi</a>
+                  </li>
+
+                  <li class="li_map">
+                    <a href="#">Chi Siamo?</a>
+                </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+     
+
+ </body>
+ </html>

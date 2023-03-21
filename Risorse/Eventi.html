@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
 
     <meta charset="UTF-8">
     
+    <title>TaranTour</title>
 
     <!-- ICONS -->
     <link rel="shortcut icon" href="images\PPM.ico" type="image/x-icon"> 
@@ -14,89 +15,99 @@
     <link rel="stylesheet" href="bootstrap-3.3.7/dist/css/bootstrap.min.css">
     
     <!-- JS -->
+
     <script src="jquery.min.js"></script>
     <script src="bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/generalJS.js"></script>
+    <script type="text/javascript" src="js/eventi.js"></script>
 
-    
-
-
-    <title>TaranTour</title>
-    
     <style>
 
-    .card {
+      .card{
         position: fixed;
-        width: 73%;
-        top: 27.5vh;
-        left: 45vh;
-        padding: 1%;
-        margin-bottom: 2vh;
+        width: 70%;
+        height: 79%;
+        border:transparent;
+        background-color: transparent;
+        top: 20%;
+        left: 24%;
+      }
+
+      .row {
+        height: 100%;
+
+      }
+
+      .col {
+     
+  
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .col-10{
         border: 2px solid darkgray;
         border-radius: 20px;
-    }
-    
-    .card-text {
-        position: fixed;
-        width: 73%;
-        bottom: 74vh;
-        left: 45vh;
-        padding: 1px;
-        border-radius: 20px;
-    }
-    
-    
-    h2 {
-        font-size: 4.5vh;
-        font-weight: bolder;    
-    font-family: 'Salsa';
-    }
-    
-    .card-img {
-        width: 70%;
-        margin: 3%;
-        border-radius: 20px;
+        background-color: white;
+        padding: 2%;
+        height: 95%;
+        /*height: 75vh;*/
+        text-align: center;
         
-    }
-    
-    img {
-        width: 35%;
-        border-radius: 10%;   
-    }
-    
-     .aiut{
-  width: 45%;
-background-color:white;
+      }
 
-  position:fixed;
-  z-index: 3;
-  right: 45vh;
-  top: 30vh;
-  padding: 1%;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-    
-p {
-  font-size: 2.3vh;
-}
+
+      .arrows {
+        transition: 0.5s;
+        z-index: 2;
+      }
+
+      .arrows:hover {
+        transform: translate(0vh, -0.4vh) scale(1.1,1.1);
+      }
+
+      .col .tooltip-inner {
+        margin-bottom: 1.3vh;
+      }
+
+      .col .tooltip-arrow {
+        margin-bottom: 1.4vh;
+      }
+
+    video::-webkit-media-controls-panel{
+      position: relative;
+      
+    }
+
+    .vidEv{
+      width: 75%; 
+      border-radius: 20px;
+      top:1vh;
+    }
+
+     h2 {
+      font-size: 4vh;
+      font-weight: bolder;    
+      font-family: 'Salsa';
+    }
+
+
+
 
     </style>
-    
   </head>
-  <body>
+  <body onload="slide()">
     <header>
       
       <img class="Logo"src="images\logo.png">
       
 
       <div class="SfondoTitolo">
-    	<h1 class="Titolo"> TaranTour </h1>
+      <h1 class="Titolo"> TaranTour </h1>
       </div>
-
 
     <div class="lang dropdown" data-toggle="tooltip" title="Lingua">
 
@@ -112,27 +123,33 @@ p {
       </ul>
     </div>
 
+
+
     <svg id="mappa" class="mappaAppIcon" data-toggle="tooltip" title="Mappa dell'applicazione" fill="#102b3f" height="10vh" width="10vh" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#102b3f"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M256.001,101.02c-39.388,0-71.432,32.045-71.432,71.432c0,39.388,32.045,71.432,71.432,71.432 c39.388,0,71.432-32.045,71.432-71.432C327.433,133.065,295.389,101.02,256.001,101.02z M256,213.445 c-22.603,0-40.993-18.389-40.993-40.993s18.389-40.993,40.993-40.993s40.993,18.39,40.993,40.993 C296.993,195.056,278.603,213.445,256,213.445z"></path> </g> </g> <g> <g> <path d="M403.703,302.096h-63.715c28.369-43.321,43.249-87.709,43.249-129.644c0-70.159-57.079-127.238-127.238-127.238 s-127.238,57.079-127.238,127.238c0,41.935,14.881,86.323,43.249,129.644h-63.715L0,466.786h512L403.703,302.096z M159.202,172.453c-0.001-53.377,43.423-96.8,96.798-96.8s96.799,43.424,96.799,96.799c0,53.343-28.498,101.699-52.407,132.872 c-0.767,0.999-1.533,1.977-2.3,2.955c-0.781,0.997-1.563,1.981-2.344,2.956c-0.249,0.31-0.498,0.623-0.747,0.931 c-0.777,0.963-1.552,1.914-2.327,2.854c-0.249,0.301-0.497,0.604-0.745,0.903c-0.774,0.935-1.546,1.857-2.315,2.767 c-0.242,0.287-0.485,0.573-0.727,0.858c-0.774,0.911-1.545,1.81-2.313,2.696c-0.229,0.265-0.458,0.528-0.686,0.79 c-0.775,0.889-1.545,1.766-2.311,2.63c-0.216,0.244-0.431,0.485-0.646,0.727c-0.777,0.871-1.549,1.731-2.315,2.574 c-0.19,0.209-0.378,0.415-0.567,0.622c-0.783,0.859-1.563,1.708-2.333,2.537c-0.162,0.174-0.324,0.347-0.485,0.521 c-0.791,0.85-1.578,1.687-2.353,2.505c-0.123,0.129-0.244,0.256-0.365,0.383c-0.808,0.849-1.607,1.684-2.394,2.497 c-0.074,0.077-0.147,0.151-0.222,0.228c-0.827,0.853-1.645,1.69-2.445,2.502c-0.018,0.018-0.036,0.036-0.053,0.054 c-5.135,5.2-9.71,9.54-13.394,12.908C229.93,329.862,159.202,257.301,159.202,172.453z M124.712,332.535h69.609 c22.376,27.534,43.37,45.907,50.029,51.489c0.002,0.002,0.004,0.003,0.006,0.005c0.241,0.202,0.465,0.389,0.668,0.557 c0.014,0.011,0.025,0.021,0.04,0.032c0.396,0.328,0.721,0.596,0.96,0.789c0.019,0.016,0.03,0.025,0.05,0.041 c0.191,0.155,0.329,0.266,0.4,0.323c0.007,0.006,0.024,0.019,0.03,0.024l0.002,0.001h0.001l0.01,0.008l9.486,7.575l9.486-7.575 l0.01-0.008h0.001l0.002-0.001c0.006-0.005,0.022-0.018,0.03-0.024c0.071-0.057,0.209-0.167,0.4-0.323 c0.018-0.015,0.029-0.024,0.05-0.041c0.238-0.194,0.564-0.462,0.96-0.789c0.014-0.011,0.025-0.021,0.04-0.032 c0.203-0.168,0.426-0.355,0.668-0.557c0.002-0.001,0.004-0.003,0.006-0.005c6.66-5.583,27.653-23.955,50.029-51.489h69.609 l68.264,103.811H56.448L124.712,332.535z"></path> </g> </g> </g></svg>
+
+
   
-    </header>
+  </header>
 
         <!-- Mappa APP   -->
         <div id="pu_map" class="row_sfond" style="display: none;">
           <div id="pop-up-mappa" class="pop-up row_conte">
               <div class="mapp"> 
                   <div class="tit_row">  
-                   <h2 style="font-family: 'Salsa'; font-size: 6vh; font-weight: bold;" >Mappa dell'applicazione
+                   <h2 style="font-family: 'Salsa'; font-size: 350%; font-weight: bold;" >Mappa dell'applicazione
                        <svg id="cl_btn_map" class="chiud" style="float:right" data-toggle="tooltip" width="35" height="35" title="Chiudi" xmlns="http://www.w3.org/2000/svg" fill="red"  class="bi bi-x-circle" viewBox="0 0 16 16">
                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                        </svg></h2> 
                    </div>
-                  <img class="imma" src="images/mappe/Settimana.png">
-                  </div> 
+                  <img class="imma" src="images/mappe/Eventi.png">
+               
+                </div>
+       
            </div>   
        </div>
 
-                      <!-- Exit Pop-Up -->
+       <!-- Exit Pop-Up -->
 
               <div id="pu_ext" class="row_sfond" style="display: none;">
                 <div id="pop-up-exit" class="pop-up row_conte hlpp" >
@@ -145,7 +162,7 @@ p {
                          </div> 
                          <div style="margin: 2.5%;">
                          <input id="cl_btn_ext" class="btn btn-danger" type="button" value="No, voglio rimanere" style="font-size: 130%;">   
-                        <input onclick="window.location.href='TaranTour.html'" type="button" class="btn btn-outline-danger" value="Sì, sono sicuro" style="font-size: 140%;">
+                        <input onclick="window.location.href='../TaranTour.html'" type="button" class="btn btn-outline-danger" value="Sì, sono sicuro" style="font-size: 140%;">
                         </div>
                     </div>
              
@@ -153,63 +170,96 @@ p {
              </div>
 
         <!-- Side Menu -->
-    <div >
     <ul class="text-center">
       <li onclick="location.href='Introduzione.html';">Introduzione</li>
       <li onclick="location.href='Storia.html';">Storia</li>
       <li onclick="location.href='Attrazioni.html';">Attrazioni culturali</li>
-      <li class="selected" onclick="location.href='Trad_Fest.html';">Tradizioni e festività</li>
-      <li onclick="location.href='Eventi.html';">Eventi</li>
+      <li onclick="location.href='Trad_Fest.html';">Tradizioni e festività</li>
+      <li class="selected" onclick="location.href='Eventi.html';">Eventi</li>
       <li onclick="location.href='Chi_Siamo.html';">Chi siamo?</li>
       <li id="exit" class="exit">Esci</li>
-	</ul>
-    </div>
-    
+    </ul>
+  <!-- INIZIO CONTENT -->
 
-    <!-- INIZIO CONTENT -->
-    
-    <div class="container">
-    
-    <div class="card-text"> 
-    
-    
-    <svg style= "float: left; margin-top: 2vh;" stroke="black" stroke-width="1" data-toggle="tooltip" title="Torna indietro" onclick="location.href='Trad_Fest.html';" xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-</svg>
-
-<script>
- $('[class="bi bi-arrow-left"]').tooltip({
-      placement: 'top'
-    });
-</script>
-
-     <h2 class="text-center"> I Riti della Settimana Santa </h2>
-    </div>
-        <div class="card">
-        <p>
-        
-        <img src="images/proc_1.jpeg" style="float: right; margin-left: 1.5%; margin-bottom: 0.5%;" alt="Immagine Processione Misteri">
-        La Settimana Santa a Taranto è una delle tradizioni religiose più importanti della città, che richiama migliaia di visitatori ogni anno.
-
-La Settimana Santa a Taranto inizia con la Domenica delle Palme, quando le strade della città sono adornate di rami di palma e i fedeli portano in processione le loro palme. La processione più importante avviene alla sera, quando la statua del Cristo Risorto viene portata in processione dal Santuario della Madonna della Salute al Duomo di Taranto.
-
-La processione dei Misteri inizia il Giovedì Santo, quando le statue dei Misteri vengono portate in processione dalle diverse confraternite della città. Queste statue rappresentano la Passione di Cristo e sono considerate tra le più belle d'Italia.
-
-<img src="images/madonna.jpeg" style="float: left; margin-right: 1.5%; margin-top: 1%;" alt="Immagine Processione Misteri">
-Il Venerdì Santo è il giorno della Via Crucis, che viene celebrata lungo le strade della città. La sera, le statue dei Misteri vengono portate in processione dalla Chiesa di San Domenico al Duomo di Taranto.
-
-Il Sabato Santo è il giorno della veglia pasquale, quando la chiesa celebra la Resurrezione di Cristo.
-
-La Settimana Santa a Taranto è un evento emozionante e intenso, con una forte partecipazione della comunità locale. I visitatori possono ammirare le belle statue dei Misteri, partecipare alle processioni e vivere l'atmosfera unica di questa antica tradizione religiosa.
+    <div class="card">
 
 
-
-
-        </p>
-        
+      <div class="row">
+        <div class="col">
+          <div class="arrows" >
+          <svg style="display: none;" id="precc" onclick="preview()" class="frecc" xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" title="slide precedente" width="100%" height="100%" fill="currentColor" class="bi bi-arrow-left-square" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+          </svg>
+          </div>
         </div>
-        
+        <div class="col-10">
+            <!-- CONTENUTO SLIDE -->
+          
+            <section style="display: none;">
+      <!---->
+              <video class="vidEv" controls src="video/Medimex.mp4">
+                Il tuo browser non supporta il tag video.
+              </video>
+
+              <h2>Medimex</h2>
+              <p> Il Medimex Taranto è un festival internazionale della musica e dell'industria musicale che si tiene a Taranto. L'evento promuove la musica italiana e internazionale, offre opportunità per la crescita dell'industria musicale locale e si concentra sulla cultura musicale del Mediterraneo.</p>
+            </section>
+
+            <section style="display: none;">
+      <!---->
+              <video class="vidEv" controls src="video/RaffoFest.mp4" >
+                Il tuo browser non supporta il tag video.
+              </video>
+
+              <h2>Raffo Festival</h2>
+              <p>Il Raffo Festival è un festival musicale che si tiene a Taranto. L'evento ospita artisti emergenti e promuove la musica indipendente e sperimentale, offrendo spettacoli dal vivo, performance artistiche e incontri culturali. Ha luogo ogni anno nel mese di settembre.</p>
+            </section>
+
+            <section style="display: none;">
+      <!-- -->
+              <video class="vidEv" controls src="video/Comix.mp4" >
+                Il tuo browser non supporta il tag video.
+              </video>
+
+              <h2>Taranto Comix</h2>
+              <p>Il Taranto Comix è un festival dedicato al fumetto, ai giochi di ruolo e alle culture popolari che si tiene a Taranto. L'evento presenta mostre, incontri con autori, concorsi, spettacoli e cosplay, offrendo un'esperienza per appassionati e curiosi. Ha luogo ogni anno nel mese di maggio.</p>
+            </section>
+
+            <section style="display: none;">
+      
+              <video class="vidEv" controls src="video/AperturaPonte.mp4">
+                Il tuo browser non supporta il tag video.
+              </video>
+
+              <h2>Apertura ponte girevole</h2>
+              <p>Il ponte girevole di Taranto è un'opera di ingegneria meccanica che permette la rotazione di un tratto della strada per consentire il passaggio delle imbarcazioni. È un evento ricorrente in cui il ponte viene aperto per permettere il transito di imbarcazioni come la Vespucci (veliero) e la Cavour (portaerei) nel Mar Piccolo.</p>
+            </section>
+
+
+      
+        </div>
+        <div class="col">
+          <div class="arrows">
+          <svg id="succ" onclick="next()" class="frecc" xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" title="slide successiva" width="100%" height="100%" fill="currentColor" class="bi bi-arrow-right-square" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+          </svg>
+        </div>
+        </div>
+  
+      </div>
+
     </div>
 
- </body>
- </html>
+
+    <script>
+      $('[class="frecc"]').tooltip({
+          placement: 'top'
+        });
+      $(document).ready(function() {
+        $("video").prop("volume", 0.5);
+      });
+      
+
+        </script>
+  </body>
+</html>

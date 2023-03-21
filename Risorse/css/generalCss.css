@@ -163,6 +163,11 @@ padding-right: 0.5vh;
 font-size: 2vh;
 }
 
+.dropdown-menu {
+
+  width: 100%;
+}
+
 .lig {
   width: 19vh;
   padding: 1%;

@@ -17,7 +17,6 @@
     <script src="jquery.min.js"></script>
     <script src="bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/generalJS.js"></script>
-    
 
     
 
@@ -26,57 +25,69 @@
     
     <style>
 
-
-    .caas {
-      width: 88%;
-     
-      background-color:white;
-      border-style: solid;
-        border-width: 0.4vh;
-        border-radius: 6%;
-        border-color: #102b3f;
+    .card {
+        position: fixed;
+        width: 73%;
+        top: 27.5vh;
+        left: 45vh;
+        padding: 1%;
+        margin-bottom: 2vh;
+        border: 2px solid darkgray;
         border-radius: 20px;
-        margin-bottom: 5%;
-    }
-
-    .col-md-5 {
-    height: 70vh;
-      width: 37%;
-      padding: 0;
-      top: 9.8vh;
-      left: 31vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
     }
     
-    .h3 {
-        font-size: 4vh;
+    .card-text {
+        position: fixed;
+        width: 73%;
+        bottom: 74vh;
+        left: 45vh;
+        padding: 1px;
+        border-radius: 20px;
+    }
+    
+    
+    h2 {
+        font-size: 4.5vh;
         font-weight: bolder;    
     font-family: 'Salsa';
     }
     
     .card-img {
-        width: 75%;
+        width: 70%;
         margin: 3%;
         border-radius: 20px;
         
     }
     
+    img {
+        width: 35%;
+        border-radius: 10%;   
+    }
     
-.help .tooltip-inner, .help .tooltip-arrow {
-  margin-right: 1.3vh;
-}
+     .aiut{
+  width: 45%;
+background-color:white;
 
+  position:fixed;
+  z-index: 3;
+  right: 45vh;
+  top: 30vh;
+  padding: 1%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+    
+p {
+  font-size: 2.3vh;
+}
 
     </style>
     
   </head>
   <body>
-  
-
     <header>
       
       <img class="Logo"src="images\logo.png">
@@ -105,7 +116,6 @@
   
     </header>
 
-
         <!-- Mappa APP   -->
         <div id="pu_map" class="row_sfond" style="display: none;">
           <div id="pop-up-mappa" class="pop-up row_conte">
@@ -117,54 +127,33 @@
                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                        </svg></h2> 
                    </div>
-                  <img class="imma" src="images/mappe/Tradizioni.png">
+                  <img class="imma" src="images/mappe/Settimana.png">
                   </div> 
            </div>   
        </div>
-       
-           </div>   
-       </div>
 
-       <!-- Help Pop-Up -->
+                      <!-- Exit Pop-Up -->
 
-       <div id="pu_hlp" class="row_sfond" style="display: none;">
-        <div id="pop-up-help" class="pop-up row_conte hlpp" >
-            <div class="aiuto"> 
-                <div class="tit_row">  
-                  <h2 style="font-family: 'Salsa'; font-size: 350%; font-weight: bold;"> Aiuto</h2> 
-                 <h3 style="font-size: 25px; padding: 1%;"> Clicca su una delle tradizioni e festività presenti per visualizzare il contenuto</h3>   
-                 </div> 
-             <input id="cl_btn_hlp" class="btn btn-secondary" type="button" value="Chiudi">
-              </div>
-     
-         </div>   
-     </div>
-
-            <!-- Exit Pop-Up -->
-
-            <div id="pu_ext" class="row_sfond" style="display: none;">
-              <div id="pop-up-exit" class="pop-up row_conte hlpp" >
-                  <div class="aiuto" style="padding:1%; width: 75%;" > 
-                      <div class="tit_row">  
-                        
-                        <h2 style="font-family: 'Salsa'; font-size: 350%; font-weight: bold; color: rgb(218, 84, 79);"> Attenzione </h2> 
-                        <h3>Stai abbandonando l'applicazione TaranTour, sei sicuro?</h3>
-                        
-                       </div> 
-                       <div style="margin: 2.5%;">
-                       <input id="cl_btn_ext" class="btn btn-danger" type="button" value="No, voglio rimanere" style="font-size: 130%;">   
-                      <input onclick="window.location.href='TaranTour.html'" type="button" class="btn btn-outline-danger" value="Sì, sono sicuro" style="font-size: 140%;">
-                      </div>
-                  </div>
-           
-               </div>   
-           </div>
-
-     
-
+              <div id="pu_ext" class="row_sfond" style="display: none;">
+                <div id="pop-up-exit" class="pop-up row_conte hlpp" >
+                    <div class="aiuto" style="padding:1%; width: 75%;" > 
+                        <div class="tit_row">  
+                          
+                          <h2 style="font-family: 'Salsa'; font-size: 350%; font-weight: bold; color: rgb(218, 84, 79);"> Attenzione </h2> 
+                          <h3>Stai abbandonando l'applicazione TaranTour, sei sicuro?</h3>
+                          
+                         </div> 
+                         <div style="margin: 2.5%;">
+                         <input id="cl_btn_ext" class="btn btn-danger" type="button" value="No, voglio rimanere" style="font-size: 130%;">   
+                        <input onclick="window.location.href='../TaranTour.html'" type="button" class="btn btn-outline-danger" value="Sì, sono sicuro" style="font-size: 140%;">
+                        </div>
+                    </div>
+             
+                 </div>   
+             </div>
 
         <!-- Side Menu -->
-    <div>
+    <div >
     <ul class="text-center">
       <li onclick="location.href='Introduzione.html';">Introduzione</li>
       <li onclick="location.href='Storia.html';">Storia</li>
@@ -180,53 +169,46 @@
     <!-- INIZIO CONTENT -->
     
     <div class="container">
-
     
-    <div id="help" class="help"> 
-    <svg  xmlns="http://www.w3.org/2000/svg" data-toggle="tooltip" title="Aiuto" width="40" height="40" fill="currentColor" class="bi bi-question-square punt_interro" viewBox="0 0 16 16">
-      <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-      <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
-    </svg>
-  </div>
-
-
-    <div>
-
-    <div class="col-md-5">
-
-      <button onclick="location.href='Sett_Santa.html';"  class="tra_fe caas">
-        <div class="card-body text-center">
-          <h3 class="h3">I Riti della Settimana Santa</h3>
-          <img class="card-img" src="images/perd.jpeg" alt="perdoni">
-          </div>
-      </button>
-      
-      <button onclick="location.href='San_Cat.html';"  class="tra_fe caas">
-        <div class="card-body text-center">
-          <h3 class="h3">San Cataldo</h3>
-          <img class="card-img" src="images/cat.jpeg" alt="San cataldo">
-          </div>
-      </button>
- 
-    </div>
-
-    <div class="col-md-5">
-      <button onclick="location.href='Sant_cec.html';"  class="tra_fe caas">
-        <div class="card-body text-center">
-          <h3 class="h3">Santa Cecilia</h3>
-          <img class="card-img" src="images/pettol.jpeg" alt="Santa Cecilia">
-          </div>
-      </button>
-
-      <button onclick="location.href='Palio.html';"  class="tra_fe caas">
-        <div class="card-body text-center">
-          <h3 class="h3">Il Palio</h3>
-          <img class="card-img" src="images/palio.jpeg" alt="il palio">
-          </div>
-      </button>
-    </div>
-  </div>
+    <div class="card-text"> 
     
+    
+    <svg style= "float: left; margin-top: 2vh;" stroke="black" stroke-width="1" data-toggle="tooltip" title="Torna indietro" onclick="location.href='Trad_Fest.html';" xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+</svg>
+
+<script>
+ $('[class="bi bi-arrow-left"]').tooltip({
+      placement: 'top'
+    });
+</script>
+
+     <h2 class="text-center"> I Riti della Settimana Santa </h2>
+    </div>
+        <div class="card">
+        <p>
+        
+        <img src="images/proc_1.jpeg" style="float: right; margin-left: 1.5%; margin-bottom: 0.5%;" alt="Immagine Processione Misteri">
+        La Settimana Santa a Taranto è una delle tradizioni religiose più importanti della città, che richiama migliaia di visitatori ogni anno.
+
+La Settimana Santa a Taranto inizia con la Domenica delle Palme, quando le strade della città sono adornate di rami di palma e i fedeli portano in processione le loro palme. La processione più importante avviene alla sera, quando la statua del Cristo Risorto viene portata in processione dal Santuario della Madonna della Salute al Duomo di Taranto.
+
+La processione dei Misteri inizia il Giovedì Santo, quando le statue dei Misteri vengono portate in processione dalle diverse confraternite della città. Queste statue rappresentano la Passione di Cristo e sono considerate tra le più belle d'Italia.
+
+<img src="images/madonna.jpeg" style="float: left; margin-right: 1.5%; margin-top: 1%;" alt="Immagine Processione Misteri">
+Il Venerdì Santo è il giorno della Via Crucis, che viene celebrata lungo le strade della città. La sera, le statue dei Misteri vengono portate in processione dalla Chiesa di San Domenico al Duomo di Taranto.
+
+Il Sabato Santo è il giorno della veglia pasquale, quando la chiesa celebra la Resurrezione di Cristo.
+
+La Settimana Santa a Taranto è un evento emozionante e intenso, con una forte partecipazione della comunità locale. I visitatori possono ammirare le belle statue dei Misteri, partecipare alle processioni e vivere l'atmosfera unica di questa antica tradizione religiosa.
+
+
+
+
+        </p>
+        
+        </div>
+        
     </div>
 
  </body>

@@ -3,7 +3,8 @@ body {
  font-family: 'Salsa', sans-serif;
 
  margin: 0;
- width: 100%;
+
+ height: 100vh;
  overflow: hidden;
  background-image: url("../images/background.jpg");
  background-size: cover;
@@ -21,10 +22,12 @@ body {
 header {
   position: relative;
 	color: white;
+  width: 100%;
 	padding: 2vh;
-    height: 14vh;
+  height: 15%;
 	background-color: #297AC5;
   z-index: 1;
+
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -48,7 +51,7 @@ ul {
   z-index: 1;
   margin: 0;
   padding: 0;
- width: 20vh;
+  width: 20%;
 /* width: 10.2%;*/
 
   /* background-color: #f1f1f1; /* Imposta il colore di sfondo */
@@ -58,7 +61,7 @@ ul {
 	
 li {
   
-  width: 40vh; 
+  width: 100%; 
   font-size: 3.6vh;
   /*font-family: 'Salsa';*/
   font-family: 'Salsa';
@@ -67,6 +70,7 @@ li {
 padding-top: 3.43vh;
 padding-bottom: 3.43vh;
   border: 0.2vh solid black;
+  /*border-radius: 20px;*/
   /*background-color: #f7f7ffff;*/
   background-color: #d1e3f5;
   text-decoration: none;
@@ -80,7 +84,7 @@ padding-bottom: 3.43vh;
 li:hover {
   transform:  scale(0.9,0.9);
   background-color:#91C2FFFF;
-  color: white;
+  /*color: white;*/
   text-decoration: none;
 }
 
@@ -108,6 +112,7 @@ li:hover {
   right:7vh;
   float:right;
   transition: 0.5s;
+
   
 }
 
@@ -121,7 +126,10 @@ li:hover {
 }
 
 .cool {
-color: white;
+  font-family: 'Salsa', sans-serif;
+  font-size: 22.5px;
+/*color: white;*/
+color: #000;
 cursor: pointer;
 }
 
@@ -140,7 +148,9 @@ user-select: none;
 }
 
 
+
 .tooltip-inner {
+  font-family: 'Salsa';
   background-color: #fff; /* white */
   color: #000; 
   font-size: 15.5px;
@@ -151,6 +161,17 @@ label {
 padding-left: 1vh;
 padding-right: 0.5vh;
 font-size: 2vh;
+}
+
+.dropdown-menu {
+  width: 100%;
+}
+
+.lig {
+  width: 19vh;
+  padding: 1%;
+  border: none;
+  background-color: transparent;
 }
 
 .lig:hover {
@@ -208,7 +229,7 @@ user-select: none;
 }
 
 .mappaAppIcon:hover{
-  fill:white;
+  /*fill:white;*/
   transform: translate(0vh, -0.4vh) scale(1.1,1.1);
   cursor: pointer;
 }
